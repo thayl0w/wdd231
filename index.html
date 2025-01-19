@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 - Web Development Class Portfolio">
+    <meta name="author" content="Mar Thyne Lowell Nacionales">
+    <title>WDD231 - Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My WDD231 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About This Portfolio</h2>
+            <p>This portfolio showcases assignments and projects completed in the WDD231 course.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Mar Thayne Lowell Nacionales</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentyear').textContent = currentYear;
+
+        const lastModified = document.lastModified;
+        document.getElementById('lastModified').textContent = `Last Updated: ${lastModified}`;
+    </script>
+</body>
+
+</html>
