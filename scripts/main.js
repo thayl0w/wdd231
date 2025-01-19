@@ -42,3 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
     document.getElementById('menu-button').addEventListener('click', toggleMenu);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Set current year
+    const currentYearElement = document.getElementById('currentyear');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+
+    // Set last modified date
+    const lastModifiedElement = document.getElementById('lastModified');
+    if (lastModifiedElement) {
+        const lastModified = new Date(document.lastModified);
+        lastModifiedElement.textContent = `Last Updated: ${lastModified.toLocaleString()}`;
+    }
+});
