@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
     <header>
-        <h1>Welcome to My WDD231 Portfolio</h1>
+        <div class="profile">
+            <img src="profile.jpg" alt="Your Profile Picture">
+            <h1>Your Name Here</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,23 +26,40 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section>
-            <h2>About This Portfolio</h2>
-            <p>This portfolio showcases assignments and projects completed in the WDD231 course.</p>
+        <section class="course-work">
+            <h2>Course Work</h2>
+            <ul>
+                <li>Placeholder 1</li>
+                <li>Placeholder 2</li>
+                <li>Placeholder 3</li>
+            </ul>
+        </section>
+        
+        <section class="location">
+            <h2>Your Place Here</h2>
+            <img src="baobab-trees.jpg" alt="Baobab Trees">
+            <p>Baobab Trees</p>
+        </section>
+        
+        <section class="certificates">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+            </div>
+            <div id="course-list" class="course-list">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
         </section>
     </main>
+    
     <footer>
-        <p>&copy; <span id="currentyear"></span> Mar Thayne Lowell Nacionales</p>
+        <p>&copy; <span id="currentyear"></span> Your Name Here - Your Place Here</p>
         <p id="lastModified"></p>
     </footer>
-    <script>
-        const currentYear = new Date().getFullYear();
-        document.getElementById('currentyear').textContent = currentYear;
-
-        const lastModified = document.lastModified;
-        document.getElementById('lastModified').textContent = `Last Updated: ${lastModified}`;
-    </script>
 </body>
 
 </html>
