@@ -98,9 +98,11 @@ main section h2 {
 }
 
 main .location img {
-    width: 100%;
+    max-width: 80%;
+    height: auto;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    display: block;
 }
 
 main .certificates .filter-buttons {
