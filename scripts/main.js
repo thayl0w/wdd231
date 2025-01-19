@@ -38,22 +38,19 @@ function toggleMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
     displayCourses(courses);
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
-    document.getElementById('menu-button').addEventListener('click', toggleMenu);
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Set current year
+    // Update footer with the current year
     const currentYearElement = document.getElementById('currentyear');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    // Set last modified date
+    // Update footer with the last modified date
     const lastModifiedElement = document.getElementById('lastModified');
     if (lastModifiedElement) {
         const lastModified = new Date(document.lastModified);
         lastModifiedElement.textContent = `Last Updated: ${lastModified.toLocaleString()}`;
     }
+
+    document.getElementById('menu-button').addEventListener('click', toggleMenu);
 });
