@@ -9,6 +9,8 @@ const courses = [
 
 function displayCourses(filteredCourses) {
     const courseList = document.getElementById('course-list');
+    if (!courseList) return; // Ensure the element exists
+
     courseList.innerHTML = '';
     filteredCourses.forEach(course => {
         const courseCard = document.createElement('div');
@@ -16,6 +18,7 @@ function displayCourses(filteredCourses) {
         courseCard.textContent = `${course.subject} ${course.number} - ${course.title} (${course.credits} credits)`;
         courseList.appendChild(courseCard);
     });
+
     updateTotalCredits(filteredCourses);
 }
 
@@ -28,12 +31,18 @@ function filterCourses(category) {
 }
 
 function updateTotalCredits(filteredCourses) {
+    const totalCreditsElement = document.getElementById('total-credits');
+    if (!totalCreditsElement) return; // Ensure the element exists
+
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    document.getElementById('total-credits').textContent = `Total Credits: ${totalCredits}`;
+    totalCreditsElement.textContent = `Total Credits: ${totalCredits}`;
 }
 
 function toggleMenu() {
-    document.getElementById('nav-menu').classList.toggle('open');
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.classList.toggle('open');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,5 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lastModifiedElement.textContent = `Last Updated: ${lastModified.toLocaleString()}`;
     }
 
-    document.getElementById('menu-button').addEventListener('click', toggleMenu);
+    const menuButton = document.getElementById('menu-button');
+    if (menuButton) {
+        menuButton.addEventListener('click', toggleMenu);
+    }
 });

@@ -1,183 +1,159 @@
-/* General Styles */
+
+/* General Styles for the whole webpage */
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Nunito Sans', sans-serif; /* Sets the font for all text */
+    margin: 0; /* Removes default margin */
+    padding: 0 10px; /* Adds space on the left and right edges */
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    background-color: #b3b3c4; /* Light background color */
+    color: #333; /* Dark gray text color */
+    font-size: 14px; /* Controls the size of text */
 }
 
+/* Header section styles */
 header {
-    background-color: #1c3d5a;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    background-color: #306ca8; /* Dark blue background for header */
+    color: white; /* White text color */
+    padding: 1rem 2rem; /* Adds space inside the header */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out header items */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    flex-direction: column; /* Stacks header items vertically on small screens */
+    text-align: center; /* Centers text within the header */
 }
 
+/* Profile section inside the header */
 header .profile {
-    display: flex;
-    align-items: center;
-    flex-basis: 100%;
-    margin-bottom: 1rem;
+    display: flex; /* Makes it flexible for alignment */
+    flex-direction: column; /* Stacks profile items vertically */
+    align-items: center; /* Centers profile content */
+    text-align: center; /* Centers text in the profile */
+    width: 100%; /* Ensures the profile section takes full width */
 }
 
+/* Profile image styles */
 header .profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+    width: 110px; /* Controls the image width */
+    height: 120px; /* Controls the image height */
+    border-radius: 50%; /* Makes the image circular */
 }
 
+/* Navigation bar inside header */
 header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-basis: 100%;
+    display: flex; /* Flexbox for navigation layout */
+    flex-wrap: wrap; /* Wrap navigation links if needed */
+    justify-content: center; /* Center the navigation links */
+    flex-basis: 100%; /* Makes navigation take full width */
 }
 
+/* Unordered list for navigation links */
 header nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Flexbox for list layout */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    flex-direction: column; /* Stacks navigation links vertically on small screens */
+    gap: 10px; /* Adds space between links */
+    justify-content: center; /* Centers the list items */
 }
 
+/* Individual navigation items */
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Adds horizontal spacing between items */
 }
 
+/* Navigation links */
 header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition when hovered */
 }
 
+/* Hover effect for navigation links */
 header nav ul li a:hover {
-    color: #ffcc00;
+    color: #ffcc00; /* Changes color when hovered */
 }
 
+/* Main content styles */
 main {
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    padding: 1rem; /* Adds space around main content */
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap sections when screen size is small */
+    gap: 1rem; /* Adds gaps between sections */
+    justify-content: center; /* Centers sections horizontally */
 }
 
+/* Individual sections inside main */
 main section {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1 1 100%;
-    max-width: 100%;
+    background-color: white; /* White background for sections */
+    padding: 1rem; /* Adds padding inside sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    flex: 1 1 100%; /* Makes section responsive */
+    max-width: 100%; /* Limits maximum width */
+    margin: 10px 0; /* Adds space above and below each section */
 }
 
-@media (min-width: 768px) {
-    main section {
-        flex: 1 1 calc(50% - 2rem);
-    }
-}
-
-@media (min-width: 1024px) {
-    main section {
-        flex: 1 1 calc(33.333% - 2rem);
-    }
-}
-
-main section h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    margin-bottom: 1rem;
-}
-
-main .location img {
-    max-width: 70%;
-    height: auto;
-    border-radius: 8px;
-    margin: 0 auto 1rem auto;
-    display: block;
-}
-
-main .certificates .filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-main .certificates .filter-buttons button {
-    padding: 0.5rem 1rem;
-    background-color: #1c3d5a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-main .certificates .filter-buttons button:hover {
-    background-color: #ffcc00;
-    color: black;
-}
-
+/* Course list styles in the certificates section */
 main .certificates .course-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    display: flex; /* Flexbox layout for courses */
+    flex-direction: column; /* Stacks course cards vertically */
+    gap: 20px; /* Adds space between course cards */
 }
 
+/* Course card styles in the certificates section */
 main .certificates .course-card {
-    padding: 1rem;
-    background-color: #1c3d5a;
-    color: white;
-    border-radius: 8px;
-    text-align: center;
-    flex: 1 1 calc(100% - 1rem);
-    min-width: 150px;
-    font-family: 'Jura', sans-serif;
-    transition: transform 0.3s, background-color 0.3s;
+    padding: 1rem; /* Adds space inside cards */
+    background-color: #3d86cf; /* Dark blue background */
+    color: rgb(0, 0, 0); /* White text color */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Centers text */
+    flex: 1 1 110%; /* Makes each course card take full width */
+    margin: 0 auto; /* Centers course cards horizontally */
+    font-family: 'Jura', sans-serif; /* Font style */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition effects */
+    min-width: 150px; /* Minimum width for cards */
 }
 
+/* Completed course card style */
 main .certificates .course-card.completed {
-    background-color: #2ecc71;
+    background-color: #1dd369; /* Green background for completed courses */
 }
 
-main .certificates .course-card:hover {
-    transform: translateY(-5px);
-    background-color: #ffcc00;
-    color: black;
+/* Footer section styles */
+footer {
+    background-color: #314c68; /* Dark blue background */
+    color: white; /* White text color */
+    text-align: center; /* Centers footer content */
+    padding: 1rem 0; /* Adds vertical padding */
+    font-size: 0.9rem; /* Sets font size */
+    margin-top: 2rem; /* Adds space above the footer */
 }
 
+/* Footer paragraph styles */
+footer p {
+    margin: 0.5rem 0; /* Adds space between paragraphs */
+}
+
+/* Responsive layout for larger screens */
 @media (min-width: 768px) {
-    main .certificates .course-card {
-        flex: 1 1 calc(45% - 1rem);
+    header {
+        flex-direction: row; /* Aligns header items horizontally */
+        text-align: left; /* Aligns text to the left */
+    }
+    header nav ul {
+        flex-direction: row; /* Aligns navigation links horizontally */
+        gap: 20px; /* Adds more space between links */
+    }
+    main section {
+        flex: 1 1 calc(50% - 2rem); /* Two sections per row */
     }
 }
 
 @media (min-width: 1024px) {
-    main .certificates .course-card {
-        flex: 1 1 calc(30% - 1rem);
+    main section {
+        flex: 1 1 calc(33.333% - 2rem); /* Three sections per row */
     }
-}
-
-footer {
-    background-color: #1c3d5a;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
 }
