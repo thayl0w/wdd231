@@ -1,7 +1,7 @@
 
 /* General Styles for the whole webpage */
 body {
-    font-family: 'Nunito Sans', sans-serif; /* Sets the font for all text */
+    font-family: 'Nunito Sans', sans-serif;
     margin: 0; /* Removes default margin */
     padding: 0 10px; /* Adds space on the left and right edges */
     box-sizing: border-box; /* Includes padding and border in element's total width and height */

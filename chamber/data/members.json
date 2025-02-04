@@ -1,0 +1,61 @@
+{
+    "members": [
+      {
+        "name": "FitNation Gym",
+        "address": "123 Makati Ave, Makati, Philippines",
+        "phone": "(+63) 917-123-4567",
+        "website": "https://fitnation.ph",
+        "image": "fitnation.png",
+        "membership": 3
+      },
+      {
+        "name": "Iron Works Fitness",
+        "address": "456 Ortigas Center, Pasig, Philippines",
+        "phone": "(+63) 917-987-6543",
+        "website": "https://ironworks.ph",
+        "image": "ironworks.png",
+        "membership": 2
+      },
+      {
+        "name": "Mighty Muscle Gym",
+        "address": "789 Quezon Blvd, Quezon City, Philippines",
+        "phone": "(+63) 917-543-2109",
+        "website": "https://mightymuscle.ph",
+        "image": "mightymuscle.png",
+        "membership": 1
+      },
+      {
+        "name": "Gold's Gym Philippines",
+        "address": "101 BGC High Street, Taguig, Philippines",
+        "phone": "(+63) 917-678-9012",
+        "website": "https://goldsgym.ph",
+        "image": "goldsgym.png",
+        "membership": 3
+      },
+      {
+        "name": "Silver Strength Gym",
+        "address": "202 Alabang Town Center, Muntinlupa, Philippines",
+        "phone": "(+63) 917-345-6789",
+        "website": "https://silverstrength.ph",
+        "image": "silverstrength.png",
+        "membership": 2
+      },
+      {
+        "name": "Green Fit Hub",
+        "address": "303 Cebu Business Park, Cebu City, Philippines",
+        "phone": "(+63) 917-234-5678",
+        "website": "https://greenfithub.ph",
+        "image": "greenfithub.png",
+        "membership": 1
+      },
+      {
+        "name": "Blue Wave Fitness",
+        "address": "404 Roxas Blvd, Manila, Philippines",
+        "phone": "(+63) 917-876-5432",
+        "website": "https://bluewavefitness.ph",
+        "image": "bluewave.png",
+        "membership": 3
+      }
+    ]
+  }
+  
