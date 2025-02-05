@@ -54,13 +54,15 @@ nav ul li a {
     width: 100%;
     text-align: center;
     border-bottom: 3px solid #1a3d7c;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 300px; /* ✅ Reduced max height for better mobile fit */
     object-fit: cover;
+    display: block;
 }
 
 .hero-btn {
@@ -71,7 +73,7 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
@@ -196,7 +198,7 @@ footer {
     padding: 5px;
 }
 
-/* Responsive Design */
+/* ✅ Mobile View Fixes */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -214,5 +216,15 @@ footer {
 
     .list-view .card img {
         margin: 0 auto 10px;
+    }
+
+    /* ✅ Fix hero image overflow on mobile */
+    .hero img {
+        max-height: 250px; /* Smaller image height */
+    }
+
+    /* ✅ Fix directory layout for smaller screens */
+    #members {
+        grid-template-columns: 1fr;
     }
 }
