@@ -1,61 +1,68 @@
 {
-    "members": [
-      {
-        "name": "FitNation Gym",
-        "address": "123 Makati Ave, Makati, Philippines",
-        "phone": "(+63) 917-123-4567",
-        "website": "https://fitnation.ph",
-        "image": "fitnation.png",
-        "membership": 3
-      },
-      {
-        "name": "Iron Works Fitness",
-        "address": "456 Ortigas Center, Pasig, Philippines",
-        "phone": "(+63) 917-987-6543",
-        "website": "https://ironworks.ph",
-        "image": "ironworks.png",
-        "membership": 2
-      },
-      {
-        "name": "Mighty Muscle Gym",
-        "address": "789 Quezon Blvd, Quezon City, Philippines",
-        "phone": "(+63) 917-543-2109",
-        "website": "https://mightymuscle.ph",
-        "image": "mightymuscle.png",
-        "membership": 1
-      },
-      {
-        "name": "Gold's Gym Philippines",
-        "address": "101 BGC High Street, Taguig, Philippines",
-        "phone": "(+63) 917-678-9012",
-        "website": "https://goldsgym.ph",
-        "image": "goldsgym.png",
-        "membership": 3
-      },
-      {
-        "name": "Silver Strength Gym",
-        "address": "202 Alabang Town Center, Muntinlupa, Philippines",
-        "phone": "(+63) 917-345-6789",
-        "website": "https://silverstrength.ph",
-        "image": "silverstrength.png",
-        "membership": 2
-      },
-      {
-        "name": "Green Fit Hub",
-        "address": "303 Cebu Business Park, Cebu City, Philippines",
-        "phone": "(+63) 917-234-5678",
-        "website": "https://greenfithub.ph",
-        "image": "greenfithub.png",
-        "membership": 1
-      },
-      {
-        "name": "Blue Wave Fitness",
-        "address": "404 Roxas Blvd, Manila, Philippines",
-        "phone": "(+63) 917-876-5432",
-        "website": "https://bluewavefitness.ph",
-        "image": "bluewave.png",
-        "membership": 3
-      }
-    ]
-  }
-  
+  "members": [
+    {
+      "name": "Ayala Corporation",
+      "address": "34F Tower One & Exchange Plaza, Ayala Triangle, Makati City, Philippines",
+      "phone": "(+63) 2-908-3000",
+      "website": "https://www.ayala.com",
+      "image": "ayala_corporation.png",
+      "industry": "Conglomerate"
+    },
+    {
+      "name": "Jollibee Foods Corporation",
+      "address": "10F, Jollibee Plaza Building, F. Ortigas Jr. Road, Ortigas Center, Pasig City, Philippines",
+      "phone": "(+63) 2-634-1111",
+      "website": "https://www.jollibee.com.ph",
+      "image": "jollibee_foods.png",
+      "industry": "Food and Beverage"
+    },
+    {
+      "name": "Globe Telecom Inc.",
+      "address": "The Globe Tower, 32nd Street corner 7th Avenue, Bonifacio Global City, Taguig City, Philippines",
+      "phone": "(+63) 2-797-2000",
+      "website": "https://www.globe.com.ph",
+      "image": "globe_telecom.png",
+      "industry": "Telecommunications"
+    },
+    {
+      "name": "SM Investments Corporation",
+      "address": "Mall of Asia Arena Annex Building, Coral Way, Pasay City, Philippines",
+      "phone": "(+63) 2-857-0100",
+      "website": "https://www.sminvestments.com",
+      "image": "sm_investments.png",
+      "industry": "Retail and Real Estate"
+    },
+    {
+      "name": "San Miguel Corporation",
+      "address": "40 San Miguel Avenue, Mandaluyong City, Philippines",
+      "phone": "(+63) 2-632-3000",
+      "website": "https://www.sanmiguel.com.ph",
+      "image": "san_miguel.png",
+      "industry": "Diversified Conglomerate"
+    },
+    {
+      "name": "Philippine Airlines",
+      "address": "PNB Financial Center, President Diosdado Macapagal Avenue, CCP Complex, Pasay City, Philippines",
+      "phone": "(+63) 2-855-8888",
+      "website": "https://www.philippineairlines.com",
+      "image": "philippine_airlines.png",
+      "industry": "Aviation"
+    },
+    {
+      "name": "BDO Unibank, Inc.",
+      "address": "BDO Corporate Center, 7899 Makati Avenue, Makati City, Philippines",
+      "phone": "(+63) 2-840-7000",
+      "website": "https://www.bdo.com.ph",
+      "image": "bdo_unibank.png",
+      "industry": "Banking and Finance"
+    },
+    {
+      "name": "Meralco (Manila Electric Company)",
+      "address": "Meralco Center, Ortigas Avenue, Pasig City, Philippines",
+      "phone": "(+63) 2-1622",
+      "website": "https://www.meralco.com.ph",
+      "image": "meralco.png",
+      "industry": "Energy and Utilities"
+    }
+  ]
+}
