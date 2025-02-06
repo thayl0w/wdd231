@@ -12,28 +12,40 @@ body {
 
 /* Header */
 header {
-    background-color: #2d4b81;
-    color: #fff;
+    width: 100%;
+    background-color: #1a3d7c;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 50px 20px;
     flex-wrap: wrap;
     border-bottom: 0px solid #ffffff;
 }
 
+.logo h1{
+    position: absolute;
+    left: 36%;
+    color: #fff;
+}
 
+.logo {
+    display: flex;
+    align-items: center;
+}
 
 .logo img {
-    height: 50px;
+    position:absolute;
+    left: 27%;
+    width: 210px; /* Adjust logo size */
+    margin-right: 100px; /* Space between the logo and the h1 */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     padding: 0;
-    margin: 30px;
+    margin: 0px;
 }
 
 nav ul li a {
@@ -54,22 +66,22 @@ nav ul li a {
 .hero img {
     width: 100%;
     height: auto;
-    max-height:400px;
-    object-fit: contain ;
+    max-height: 400px;
+    object-fit: contain;
     display: block;
 }
 
 .hero-btn {
-    background-color:#cfe2ff;
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: #cfe2ff;
     color: #333;
     border: none;
     padding: 10px 20px;
     font-size: 30px;
     font-weight: bold;
-    position: absolute;
-    bottom: 650px;
-    left: 90%;
-    transform: translateX(-50%);
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -109,11 +121,19 @@ section {
 
 /* Weather Styling Fix */
 .weather, .forecast {
+    color: rgb(242, 184, 113);
     min-height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+#currentWeather img, #forecast img {
+    width: 60px; /* Adjust the size as needed */
+    height: 50px;
+    vertical-align: middle;
+}
+
 
 /* Business Directory */
 .directory {
@@ -183,7 +203,7 @@ footer {
 
 .social-icons img {
     width: 30px;
-    margin: 0 10px;
+    margin: 10px;
     border: 2px solid white;
     border-radius: 50%;
     padding: 5px;
