@@ -4,7 +4,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
+    background-color: #cfe2ff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -12,15 +12,17 @@ body {
 
 /* Header */
 header {
-    background-color: #1a3d7c;
+    background-color: #2d4b81;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     flex-wrap: wrap;
-    border-bottom: 3px solid #63c6ff;
+    border-bottom: 0px solid #ffffff;
 }
+
+
 
 .logo img {
     height: 50px;
@@ -29,9 +31,9 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 50px;
     padding: 0;
-    margin: 0;
+    margin: 30px;
 }
 
 nav ul li a {
@@ -58,7 +60,7 @@ nav ul li a {
 }
 
 .hero-btn {
-    background-color:#63c6ff;
+    background-color:#cfe2ff;
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -81,7 +83,7 @@ main {
 }
 
 h2 {
-    color: #1a3d7c;
+    color: #000000;
     border-bottom: 2px solid#000000;
     padding-bottom: 5px;
     display: inline-block;
@@ -101,7 +103,7 @@ section {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #1a3d7c;
+    border: 2px solid #c2c2c2;
     text-align: center;
 }
 
@@ -134,7 +136,7 @@ section {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #1a3d7c;
+    border: 2px solid #d7d5d5;
     text-align: center;
     transition: transform 0.2s;
 }
@@ -174,9 +176,9 @@ footer {
     background-color: #1a3d7c;
     color: #fff;
     text-align: center;
-    padding: 15px 20px;
-    margin-top: 20px;
-    border-top: 3px solid #63c6ff;
+    padding: 5px 20px;
+    margin-top: 80px;
+    border-top: 0px solid #fdfdfd;
 }
 
 .social-icons img {
