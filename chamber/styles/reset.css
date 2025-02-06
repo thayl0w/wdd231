@@ -22,7 +22,7 @@ header {
     border-bottom: 0px solid #ffffff;
 }
 
-header h1{
+h1{
     position: absolute;
     left: 36%;
     color: #fff;
@@ -210,31 +210,144 @@ footer {
     padding: 5px;
 }
 
-/* Mobile View Fixes */
+ 
+/* Mobile View */
 @media (max-width: 768px) {
-    nav ul {
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        position: relative;
+    }
+
+    header h1 {
+        position: static;
+        font-size: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .logo img {
+        position: static;
+        width: 150px;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1a3d7c;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 10;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    .menu-open nav {
+        display: flex;
+    }
+
+    .menu-open .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-open .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero img {
+        max-height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .hero-btn {
+        bottom: 10px;
+        left: 50%;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
     .info-container {
         flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    section {
+        min-width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    #members {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        width: 100%;
     }
 
     .list-view .card {
         flex-direction: column;
         text-align: center;
+        width: 100%;
     }
 
     .list-view .card img {
         margin: 0 auto 10px;
     }
 
-    .hero img {
-        max-height: 250px;
+    footer {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
     }
 
-    #members {
-        grid-template-columns: 1fr;
+    .social-icons img {
+        width: 25px;
+        margin: 5px;
     }
 }
