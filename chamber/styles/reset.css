@@ -40,13 +40,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-#toggleTheme {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-}
 
 /* Hero Section */
 .hero {
@@ -119,16 +112,6 @@ section {
     margin-top: 20px;
 }
 
-#toggleView {
-    background-color: #1a3d7c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
 
 /* Default Grid View */
 #members {

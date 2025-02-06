@@ -4,8 +4,8 @@
       "name": "Ayala Corporation",
       "address": "34F Tower One & Exchange Plaza, Ayala Triangle, Makati City, Philippines",
       "phone": "(+63) 2-908-3000",
-      "website": "https://www.ayala.com",
-      "image": "ayala_corporation.png",
+      "website": "https://ayala.com",
+      "imageUrl": "https://www.bing.com/images/blob?bcid=Sw2pwMww2BEIqxcxoNWLuD9SqbotqVTdP2g",
       "industry": "Conglomerate"
     },
     {
@@ -13,7 +13,7 @@
       "address": "10F, Jollibee Plaza Building, F. Ortigas Jr. Road, Ortigas Center, Pasig City, Philippines",
       "phone": "(+63) 2-634-1111",
       "website": "https://www.jollibee.com.ph",
-      "image": "jollibee_foods.png",
+      "imageUrl": "https://queen.jollibee.com.ph/2022/02/jollibee-logo-footer-2x.png",
       "industry": "Food and Beverage"
     },
     {
@@ -21,7 +21,7 @@
       "address": "The Globe Tower, 32nd Street corner 7th Avenue, Bonifacio Global City, Taguig City, Philippines",
       "phone": "(+63) 2-797-2000",
       "website": "https://www.globe.com.ph",
-      "image": "globe_telecom.png",
+      "imageUrl": "https://www.bing.com/images/blob?bcid=S9D-N.FvkhEIqxcxoNWLuD9SqbotqVTdP0E",
       "industry": "Telecommunications"
     },
     {
@@ -29,7 +29,7 @@
       "address": "Mall of Asia Arena Annex Building, Coral Way, Pasay City, Philippines",
       "phone": "(+63) 2-857-0100",
       "website": "https://www.sminvestments.com",
-      "image": "sm_investments.png",
+      "imageUrl": "https://www.bing.com/images/blob?bcid=SwK21F8iOhEIqxcxoNWLuD9SqbotqVTdP-A",
       "industry": "Retail and Real Estate"
     },
     {
@@ -37,7 +37,7 @@
       "address": "40 San Miguel Avenue, Mandaluyong City, Philippines",
       "phone": "(+63) 2-632-3000",
       "website": "https://www.sanmiguel.com.ph",
-      "image": "san_miguel.png",
+      "imageUrl": "https://www.sanmiguelbrewery.com/wp-content/uploads/2016/04/escudo-1-768x1160.png",
       "industry": "Diversified Conglomerate"
     },
     {
@@ -45,7 +45,7 @@
       "address": "PNB Financial Center, President Diosdado Macapagal Avenue, CCP Complex, Pasay City, Philippines",
       "phone": "(+63) 2-855-8888",
       "website": "https://www.philippineairlines.com",
-      "image": "philippine_airlines.png",
+      "imageUrl": "https://assets.rappler.com/F7F2627ADE90439EB7C7A0F4CC31449E/img/7F1C3B7E5480435B8B36726918607951/PAL_logo_1-liner_whitebg.png",
       "industry": "Aviation"
     },
     {
@@ -53,7 +53,7 @@
       "address": "BDO Corporate Center, 7899 Makati Avenue, Makati City, Philippines",
       "phone": "(+63) 2-840-7000",
       "website": "https://www.bdo.com.ph",
-      "image": "bdo_unibank.png",
+      "imageUrl": "https://th.bing.com/th/id/OIP.h_DB-8GZdIeHx1-vk_BAOwHaC7?rs=1&pid=ImgDetMaing",
       "industry": "Banking and Finance"
     },
     {
@@ -61,7 +61,7 @@
       "address": "Meralco Center, Ortigas Avenue, Pasig City, Philippines",
       "phone": "(+63) 2-1622",
       "website": "https://www.meralco.com.ph",
-      "image": "meralco.png",
+      "imageUrl": "https://www.bing.com/images/blob?bcid=S1pmlPk8MREIqxcxoNWLuD9SqbotqVTdPxw",
       "industry": "Energy and Utilities"
     }
   ]
