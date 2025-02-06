@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const membersContainer = document.getElementById("members");
-    const apiKey = "fb7d38f56f21ee35d1914a39d838bafc";  // Replace with your actual API key
+    const apiKey = "fb7d38f56f21ee35d1914a39d838bafc";  
     const city = "Manila";
     const country = "PH";
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`;
@@ -86,13 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchMembers();
     fetchWeather();
 
-    // Add event listener for Keynote Tickets button
+    //  event listener for Keynote Tickets button
     const keynoteButton = document.querySelector(".hero-btn");
     keynoteButton.addEventListener("click", () => {
         alert("Keynote Tickets are now available! Please contact the Chamber of Commerce for more details.");
     });
 
-    // Add event listeners for navigation buttons
+    //  event listeners for navigation buttons
     const navLinks = document.querySelectorAll("nav ul li a");
     navLinks.forEach(link => {
         link.addEventListener("click", (event) => {
