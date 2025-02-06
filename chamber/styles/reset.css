@@ -22,7 +22,7 @@ header {
     border-bottom: 0px solid #ffffff;
 }
 
-.logo h1{
+header h1{
     position: absolute;
     left: 36%;
     color: #fff;
