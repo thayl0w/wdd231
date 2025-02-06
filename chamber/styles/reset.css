@@ -19,7 +19,7 @@ header {
     align-items: center;
     padding: 15px 20px;
     flex-wrap: wrap;
-    border-bottom: 3px solid #ffd700;
+    border-bottom: 3px solid #63c6ff;
 }
 
 .logo img {
@@ -40,34 +40,33 @@ nav ul li a {
     font-weight: bold;
 }
 
-
 /* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 3px solid #1a3d7c;
+    border-bottom: 3px solid #ffffff;
     overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    max-height: 300px; /* ✅ Reduced max height for better mobile fit */
-    object-fit: cover;
+    max-height:400px;
+    object-fit: contain ;
     display: block;
 }
 
 .hero-btn {
-    background-color: #ffd700;
+    background-color:#63c6ff;
     color: #333;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     position: absolute;
-    bottom: 15px;
-    left: 50%;
+    bottom: 650px;
+    left: 90%;
     transform: translateX(-50%);
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -83,7 +82,7 @@ main {
 
 h2 {
     color: #1a3d7c;
-    border-bottom: 2px solid #ffd700;
+    border-bottom: 2px solid#000000;
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -106,12 +105,19 @@ section {
     text-align: center;
 }
 
+/* Weather Styling Fix */
+.weather, .forecast {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Business Directory */
 .directory {
     text-align: center;
     margin-top: 20px;
 }
-
 
 /* Default Grid View */
 #members {
@@ -170,7 +176,7 @@ footer {
     text-align: center;
     padding: 15px 20px;
     margin-top: 20px;
-    border-top: 3px solid #ffd700;
+    border-top: 3px solid #63c6ff;
 }
 
 .social-icons img {
@@ -181,7 +187,7 @@ footer {
     padding: 5px;
 }
 
-/* ✅ Mobile View Fixes */
+/* Mobile View Fixes */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -201,12 +207,10 @@ footer {
         margin: 0 auto 10px;
     }
 
-    /* ✅ Fix hero image overflow on mobile */
     .hero img {
-        max-height: 250px; /* Smaller image height */
+        max-height: 250px;
     }
 
-    /* ✅ Fix directory layout for smaller screens */
     #members {
         grid-template-columns: 1fr;
     }

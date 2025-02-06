@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const membersContainer = document.getElementById("members");
-    const apiKey = "YOUR_API_KEY"; 
+    const apiKey = "fb7d38f56f21ee35d1914a39d838bafc";  // Replace with your actual API key
     const city = "Manila";
     const country = "PH";
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`;
@@ -37,13 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchWeather() {
         try {
             const weatherResponse = await fetch(weatherUrl);
+            if (!weatherResponse.ok) throw new Error(`Weather API error! Status: ${weatherResponse.status}`);
             const weatherData = await weatherResponse.json();
+            
             document.getElementById("currentWeather").textContent = `${weatherData.weather[0].description}, ${weatherData.main.temp}°C`;
             document.getElementById("weatherDetails").textContent = `High: ${weatherData.main.temp_max}°C | Low: ${weatherData.main.temp_min}°C`;
             document.getElementById("humidity").textContent = `Humidity: ${weatherData.main.humidity}%`;
 
             const forecastResponse = await fetch(forecastUrl);
+            if (!forecastResponse.ok) throw new Error(`Forecast API error! Status: ${forecastResponse.status}`);
             const forecastData = await forecastResponse.json();
+            
             const forecastContainer = document.getElementById("forecast");
             forecastContainer.innerHTML = "<h3>Weather Forecast</h3>";
             forecastData.list.slice(0, 5).forEach(item => {
@@ -51,6 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         } catch (error) {
             console.error("Error fetching weather data:", error);
+            document.getElementById("currentWeather").textContent = "Weather data unavailable";
+            document.getElementById("weatherDetails").textContent = "High: --°C | Low: --°C";
+            document.getElementById("humidity").textContent = "Humidity: --%";
+            document.getElementById("forecast").innerHTML = "<h3>Weather Forecast</h3><p>Forecast data unavailable.</p>";
         }
     }
 

@@ -6,7 +6,8 @@
       "phone": "(+63) 2-908-3000",
       "website": "https://ayala.com",
       "imageUrl": "https://www.bing.com/images/blob?bcid=Sw2pwMww2BEIqxcxoNWLuD9SqbotqVTdP2g",
-      "industry": "Conglomerate"
+      "industry": "Conglomerate",
+      "membershipLevel": 3
     },
     {
       "name": "Jollibee Foods Corporation",
@@ -14,7 +15,8 @@
       "phone": "(+63) 2-634-1111",
       "website": "https://www.jollibee.com.ph",
       "imageUrl": "https://queen.jollibee.com.ph/2022/02/jollibee-logo-footer-2x.png",
-      "industry": "Food and Beverage"
+      "industry": "Food and Beverage",
+      "membershipLevel": 3
     },
     {
       "name": "Globe Telecom Inc.",
@@ -22,7 +24,8 @@
       "phone": "(+63) 2-797-2000",
       "website": "https://www.globe.com.ph",
       "imageUrl": "https://www.bing.com/images/blob?bcid=S9D-N.FvkhEIqxcxoNWLuD9SqbotqVTdP0E",
-      "industry": "Telecommunications"
+      "industry": "Telecommunications",
+      "membershipLevel": 3
     },
     {
       "name": "SM Investments Corporation",
@@ -30,7 +33,8 @@
       "phone": "(+63) 2-857-0100",
       "website": "https://www.sminvestments.com",
       "imageUrl": "https://www.bing.com/images/blob?bcid=SwK21F8iOhEIqxcxoNWLuD9SqbotqVTdP-A",
-      "industry": "Retail and Real Estate"
+      "industry": "Retail and Real Estate",
+      "membershipLevel": 3
     },
     {
       "name": "San Miguel Corporation",
@@ -38,7 +42,8 @@
       "phone": "(+63) 2-632-3000",
       "website": "https://www.sanmiguel.com.ph",
       "imageUrl": "https://www.sanmiguelbrewery.com/wp-content/uploads/2016/04/escudo-1-768x1160.png",
-      "industry": "Diversified Conglomerate"
+      "industry": "Diversified Conglomerate",
+      "membershipLevel": 3
     },
     {
       "name": "Philippine Airlines",
@@ -46,7 +51,8 @@
       "phone": "(+63) 2-855-8888",
       "website": "https://www.philippineairlines.com",
       "imageUrl": "https://assets.rappler.com/F7F2627ADE90439EB7C7A0F4CC31449E/img/7F1C3B7E5480435B8B36726918607951/PAL_logo_1-liner_whitebg.png",
-      "industry": "Aviation"
+      "industry": "Aviation",
+      "membershipLevel": 3
     },
     {
       "name": "BDO Unibank, Inc.",
@@ -54,7 +60,8 @@
       "phone": "(+63) 2-840-7000",
       "website": "https://www.bdo.com.ph",
       "imageUrl": "https://th.bing.com/th/id/OIP.h_DB-8GZdIeHx1-vk_BAOwHaC7?rs=1&pid=ImgDetMaing",
-      "industry": "Banking and Finance"
+      "industry": "Banking and Finance",
+      "membershipLevel": 3
     },
     {
       "name": "Meralco (Manila Electric Company)",
@@ -62,7 +69,8 @@
       "phone": "(+63) 2-1622",
       "website": "https://www.meralco.com.ph",
       "imageUrl": "https://www.bing.com/images/blob?bcid=S1pmlPk8MREIqxcxoNWLuD9SqbotqVTdPxw",
-      "industry": "Energy and Utilities"
+      "industry": "Energy and Utilities",
+      "membershipLevel": 3
     }
   ]
 }
