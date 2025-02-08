@@ -23,7 +23,7 @@
     max-width: 30px; /* Adjust the width as needed */
     background: #d6c7a7;
     position: sticky;
-    margin-top: -20; /* Makes it stick when scrolling */
+    margin-top: -20px; 
     margin-left: -20%;
     
 }
