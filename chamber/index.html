@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manila Chamber of Commerce</title>
+    <meta name="description" content="Metro Manila Chamber of Commerce connects businesses with opportunities, resources, and community engagement.">
+    <meta name="author" content="Mar Thayne Lowell Nacionales">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Chamber of Commerce - Home">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Manila Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/hero.jpg" alt="City View">
+        <button class="hero-btn">Join Us</button>
+    </section>
+
+    <main>
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <p>Stay updated with the latest business networking events.</p>
+        </section>
+
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <p id="currentWeather">Loading...</p>
+        </section>
+
+        <section class="spotlight">
+            <h2>Spotlight Businesses</h2>
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Manila Chamber of Commerce | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
