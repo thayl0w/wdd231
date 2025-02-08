@@ -8,8 +8,8 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8f5e9; /* Light Green */
-    color: #222; /* Dark Gray */
+    background-color: #e8f5e9; 
+    color: #222; 
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ body {
 /* Header */
 header {
     width: 100%;
-    background-color: #1b5e20; /* Deep Green */
+    background-color: #1b5e20; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,7 @@ h1 img {
 
 h1 {
     flex: 1;
-    color: #ffffff; /* White */
+    color: #ffffff; 
     text-align: center;
     margin: 0;
     margin-left: 20%;
@@ -55,7 +55,7 @@ h1 {
 .menu-icon {
     display: none;
     font-size: 30px;
-    color: #ffffff; /* White */
+    color: #ffffff; 
     cursor: pointer;
 }
 
@@ -75,7 +75,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff; /* White */
+    color: #ffffff; 
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
@@ -109,8 +109,7 @@ nav ul li a {
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 3px solid #ffffff; /* White */
-    overflow: hidden;
+    border-bottom: 3px solid #ffffff; 
 }
 
 .hero img {
@@ -126,8 +125,8 @@ nav ul li a {
     bottom: 20px;
     left: 90%;
     transform: translateX(-50%);
-    background-color: #388e3c; /* Medium Green */
-    color: #ffffff; /* White */
+    background-color: #388e3c; 
+    color: #ffffff; 
     border: none;
     padding: 10px 20px;
     font-size: 20px;
@@ -146,7 +145,7 @@ main {
 }
 
 h2 {
-    color: #1b5e20; /* Deep Green */
+    color: #1b5e20; 
     border-bottom: 2px solid #1b5e20;
     padding-bottom: 5px;
     display: inline-block;
@@ -164,11 +163,11 @@ h2 {
 section {
     flex: 1;
     min-width: 250px;
-    background-color: #ffffff; /* White */
+    background-color: #ffffff; 
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #a5d6a7; /* Light Green */
+    border: 2px solid #a5d6a7;
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -181,7 +180,7 @@ section {
     .hero-btn {
         width: 90%;
         left: 50%;
-        background-color: #2e7d32; /* Slightly Darker Green */
+        background-color: #2e7d32; 
     }
     section {
         flex: 100%;
@@ -191,8 +190,8 @@ section {
 
 /* Footer */
 footer {
-    background-color: #2e7d32; /* Darker Green */
-    color: #ffffff; /* White */
+    background-color: #2e7d32; 
+    color: #ffffff; 
     padding: 10px;
     font-size: 14px;
     display: flex;

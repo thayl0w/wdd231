@@ -1,6 +1,6 @@
 const apiKey = "fb7d38f56f21ee35d1914a39d838bafc";
 const city = "Manila";
-let useCelsius = false; // Default to Fahrenheit
+let useCelsius = false; 
 
 function fetchWeather() {
     const unit = useCelsius ? "metric" : "imperial";
