@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,25 +35,28 @@
     </section>
 
     <main>
-
         <div class="container">
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay updated with the latest business networking events.</p>
-        </section>
-    
-            <!-- Weather Section on the Side -->
             <section class="weather">
                 <div id="currentWeather"></div>
                 <div id="forecast"></div>
             </section>
+            
+            <section class="testimonials">
+                <h2>Testimonials</h2>
+                <p>"The Manila Chamber of Commerce has been instrumental in helping our business grow and connect with other professionals."</p>
+                <p>"Joining the Chamber was the best decision for our company's growth. The networking opportunities are unmatched."</p>
+            </section>
+            
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <p>Stay updated with the latest business networking events.</p>
+            </section>
+    
+            <section class="spotlight">
+                <h2>Spotlight Businesses</h2>
+                <div id="directory-container"></div>
+            </section>
         </div>
-        
-
-        <section class="spotlight">
-            <h2>Spotlight Businesses</h2>
-            <div id="spotlight-container"></div>
-        </section>
     </main>
 
     <footer>
@@ -70,12 +74,12 @@
                 <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
                 <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
             </div>
-    
+
             <div class="footer-credit">
                 <p>WDD231 Class Project</p>
                 <p>Mar Thayne Lowell Nacionales</p>
                 <p>&copy; <span id="year"></span> Manila Chamber of Commerce</p>
-                <p>Last Modification: <span id="lastModified"></span></p>
+                <p>Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
     </footer>

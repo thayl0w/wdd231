@@ -58,8 +58,8 @@ function fetchWeather() {
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchWeather();
-    
-    // Display last modified date
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
-});
+       // Display last modified date
+       const lastModified = document.lastModified;
+       document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+   });
+   

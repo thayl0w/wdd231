@@ -2,6 +2,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 /* General Styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #cfe2ff;
@@ -63,10 +67,11 @@ nav ul li a {
     display: block;
 }
 
+/* Hero Button */
 .hero-btn {
     position: absolute;
     bottom: 20px;
-    left: 80%;
+    left: 80%; /* Move the button left or right */
     transform: translateX(-50%);
     background-color: #cfe2ff;
     color: #333;
@@ -76,6 +81,7 @@ nav ul li a {
     font-weight: bold;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    top: 80%; /* Move the button up or down */
 }
 
 /* Main Content */
@@ -110,64 +116,15 @@ section {
     border: 2px solid #c2c2c2;
 }
 
-/* Weather Styling */
-.weather, .forecast {
-    color: rgb(242, 184, 113);
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#currentWeather img, #forecast img {
-    width: 60px; 
-    height: 50px;
-}
-
-/* Business Directory */
-.directory {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.card {
-    background-color: #fff;
-    padding: 15px;
+.member {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #d7d5d5;
-    text-align: center;
-    transition: transform 0.2s;
 }
 
-.card img {
-    width: 100px;
-    border-radius: 5px;
-}
-
-.list-view {
-    display: flex;
-    flex-direction: column;
-}
-
-.list-view .card {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 15px;
-}
-
-.list-view .card img {
-    margin-right: 15px;
-}
 
 /* Footer */
 footer {
@@ -190,126 +147,27 @@ footer {
     margin: 0 auto;
 }
 
-.footer-info {
-    text-align: left;
+.footer-info, .footer-icons, .footer-credit {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    min-width: 200px; /* Set a reasonable minimum width */
-    max-width: 300px; /* Prevent it from expanding too much */
-    font-size: 14px; /* Adjust text size */
+    min-width: 250px;
+    margin: 10px;
 }
 
 .footer-info h3 {
-    font-size: 16px; /* Slightly larger than the text */
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.footer-info p, .footer-info a {
-    font-size: 14px; /* Keeps paragraph and links at a normal size */
-    margin: 2px 0;
-    line-height: 1.4;
-}
-
-.footer-info a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-info a:hover {
-    text-decoration: underline;
-}
-
-
-.social-icons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex: 1;
+.footer-icons a {
+    margin: 0 10px;
+    display: inline-block;
 }
 
 .footer-icons img {
     width: 50px;
-    margin: 21px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 5px;
-    ;
+    height: 46px;
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .logo img {
-        position: static;
-        width: 150px;
-        margin: 10px 0;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #1a3d7c;
-        padding: 15px 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-    }
-
-    .hero img {
-        max-height: 250px;
-        object-fit: cover;
-    }
-
-    .hero-btn {
-        bottom: 10px;
-        left: 50%;
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .info-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #members {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .list-view .card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-icons img {
-        width: 25px;
-        margin: 5px;
-    }
+.footer-credit p {
+    margin: 5px 0;
+    font-size: 15px;
 }

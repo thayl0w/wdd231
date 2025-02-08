@@ -1,5 +1,4 @@
-
-
+/* Main Sections */
 .main-sections {
     display: flex;
     justify-content: space-between; /* Space between the sections */
@@ -7,19 +6,27 @@
     gap: 20px; /* Adds spacing between sections */
 }
 
+/* Events and Weather Sections */
 .events, .weather {
     flex: 1; /* Allows both sections to take equal space */
     background: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Move the sections up or down */
+    margin-left: 20px; /* Move the sections left or right */
+    margin-right: 20px; /* Move the sections left or right */
 }
 
 /* Ensure the weather section has a defined width */
 .weather {
     max-width: 300px; /* Adjust the width as needed */
+    width: 100px; /* Adjust width as needed */
+    background: #d6c7a7;
+    position: sticky;
+    top: 10px; /* Makes it stick when scrolling */
+    margin-left: -66%;
 }
-
 
 /* Wrapper to position weather section */
 .container {
@@ -27,15 +34,7 @@
     display: flex;
     justify-content: space-between; /* Places content on both sides */
     align-items: flex-start; /* Aligns items at the top */
-    max-width: 100px; /* Adjust based on your layout */
     margin: auto;
-}
-
-
-
-.container {
-    left: -90%; /* Moves it towards the right */
-    transform: translateX(-100%); /* Ensures it stays within viewport */
 }
 
 /* Main content (your website content) */
@@ -44,19 +43,7 @@
     padding: 20px;
 }
 
-/* Weather section positioned on the side */
-.weather {
-    width: 300px; /* Adjust width as needed */
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin-left: 20px; /* Adds spacing from main content */
-    position: sticky;
-    top: 10px; /* Makes it stick when scrolling */
-}
-
-
+/* Weather header */
 .weather-header {
     background: black;
     color: white;
@@ -66,21 +53,24 @@
     padding: 8px;
 }
 
+/* Weather content */
 .weather-content {
     text-align: center;
     padding: 10px;
 }
 
 .weather-content img {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 70px;
 }
 
+/* Temperature */
 .temp {
     font-size: 22px;
     font-weight: bold;
 }
 
+/* Forecast item */
 .forecast-item {
     font-size: 16px;
     padding: 5px 10px;
@@ -92,16 +82,19 @@
     color: black;
 }
 
+/* Hero section */
 .hero {
     text-align: center;
 }
 
+/* Directory container */
 #directory-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* Directory item */
 .directory-item {
     border: 1px solid #ccc;
     padding: 15px;
@@ -129,4 +122,66 @@
 
 .list-view .business-logo {
     margin-right: 15px;
+}
+
+/* Spotlight Section */
+.spotlight {
+    margin-top: 200px; /* Move the spotlight section up or down */
+    margin-left: -500px; /* Move the spotlight section left or right */
+    margin-right: 100px; /* Move the spotlight section left or right */
+}
+
+.events {
+    margin-top: 20px; /* Add this value to move the events section up or down */
+    margin-left: 20px; /* Add this value to move the events section left or right */
+    margin-right: -400px; /* Add this value to move the events section left or right */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #e1efff;
+    padding: 0px;
+    margin: 20px 0; /* Move the testimonials section up or down */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: -300px; /* Move the testimonials section left or right */
+    margin-right: 20px; /* Move the testimonials section left or right */
+    width: 80%; /* Adjust the width of the testimonials section */
+    height: 300px; /* Adjust the height of the testimonials section */
+    margin-top: -33%;
+}
+
+.testimonials h2 {
+    color: #1a3d7c;
+    border: none;
+    margin-bottom: 20px; /* Move the heading up or down */
+    margin-left: 20px; /* Move the heading left or right */
+    margin-right: 20px; /* Move the heading left or right */
+}
+
+.testimonials p {
+    font-style: italic;
+    color: #333;
+    margin-top: 10px; /* Move the paragraphs up or down */
+    margin-left: 20px; /* Move the paragraphs left or right */
+    margin-right: 20px; /* Move the paragraphs left or right */
+}
+
+/* Map Section */
+.map {
+    margin: 20px 0; /* Move the map section up or down */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Move the map section left or right */
+    margin-right: 20px; /* Move the map section left or right */
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    margin-top: 20px; /* Move the iframe up or down */
+    margin-left: 20px; /* Move the iframe left or right */
+    margin-right: 20px; /* Move the iframe left or right */
 }
