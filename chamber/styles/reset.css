@@ -26,6 +26,14 @@ header {
     box-sizing: border-box; /* Ensure padding is included in the width calculation */;
 }
 
+h1 img {
+    width: 50px;  /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    vertical-align: middle;  /* Align the image vertically with the text */
+    margin-right: 10px;  /* Add space between the image and text */
+}
+
+
 h1 {
     flex: 1;
     color: #fff;
@@ -35,7 +43,7 @@ h1 {
 }
 
 .logo img {
-    width: 210px;
+    width: 10px;
 }
 
 /* Navigation */
@@ -233,5 +241,54 @@ footer {
         flex: none;
         width: 100%; /* Full width on smaller screens */
         text-align: center;
+    }
+}
+
+
+/* Additional Mobile View Fix */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        margin-left: 0; /* Reset margin for mobile view */
+        text-align: center;
+    }
+
+    .nav-menu {
+        width: 100%; /* Ensure navigation menu fits mobile screen */
+    }
+    
+    .hero-btn {
+        left: 50%;
+        transform: translateX(-50%); /* Center the button */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for mobile view */
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        flex: 1 1 100%; /* Make sections take full width on mobile */
+        min-width: auto; /* Ensure sections fit mobile screen */
+        margin-bottom: 15px; /* Adjust bottom margin */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-icons, .footer-credit {
+        width: 100%; /* Full width on mobile */
+        text-align: center;
+        margin-bottom: 10px; /* Add some space between footer elements */
     }
 }
