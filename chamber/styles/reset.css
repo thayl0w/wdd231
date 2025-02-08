@@ -245,7 +245,7 @@ footer {
 }
 
 
-/* Additional Mobile View Fix */
+/* Mobile View Fixes */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -260,10 +260,11 @@ footer {
     .nav-menu {
         width: 100%; /* Ensure navigation menu fits mobile screen */
     }
-    
+
     .hero-btn {
-        left: 50%;
-        transform: translateX(-50%); /* Center the button */
+        width: auto;
+        left: 50%; /* Center the button */
+        transform: translateX(-50%);
     }
 
     main {
@@ -279,6 +280,22 @@ footer {
         flex: 1 1 100%; /* Make sections take full width on mobile */
         min-width: auto; /* Ensure sections fit mobile screen */
         margin-bottom: 15px; /* Adjust bottom margin */
+    }
+
+    .events {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .testimonials {
+        margin: 20px 0; /* Adjust margins for mobile view */
+        width: 100%;
+    }
+
+    .weather {
+        margin-top: 0;
+        margin-left: 0;
+        max-width: 100%; /* Ensure weather section fits mobile screen */
     }
 
     .footer-container {

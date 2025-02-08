@@ -190,7 +190,7 @@
 
 /* Events Section */
 .events {
-    margin-top: -700px; /* Add this value to move the events section up or down */
+    margin-top: -650px; /* Add this value to move the events section up or down */
     margin-left: 20%;
     margin-right: 20%;
 }
