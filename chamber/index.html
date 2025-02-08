@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/weather.js" defer></script>
-    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,15 +34,20 @@
     </section>
 
     <main>
+
+        <div class="container">
         <section class="events">
             <h2>Upcoming Events</h2>
             <p>Stay updated with the latest business networking events.</p>
         </section>
-
-        <section class="weather">
-            <h2>Current Weather</h2>
-            <p id="currentWeather">Loading...</p>
-        </section>
+    
+            <!-- Weather Section on the Side -->
+            <section class="weather">
+                <div id="currentWeather"></div>
+                <div id="forecast"></div>
+            </section>
+        </div>
+        
 
         <section class="spotlight">
             <h2>Spotlight Businesses</h2>
@@ -52,8 +56,29 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Manila Chamber of Commerce | WDD 231</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Manila Chamber of Commerce</h3>
+                <p>10 Ayala Avenue</p>
+                <p>Manila, Philippines 1000</p>
+                <p><a href="mailto:info@manilacc.org">info@manilacc.org</a></p>
+                <p>(+63) 555-2300</p>
+            </div>
+            
+            <div class="footer-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+    
+            <div class="footer-credit">
+                <p>WDD231 Class Project</p>
+                <p>Mar Thayne Lowell Nacionales</p>
+                <p>&copy; <span id="year"></span> Manila Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
     </footer>
+    
 </body>
 </html>

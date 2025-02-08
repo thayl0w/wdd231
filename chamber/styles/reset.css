@@ -17,36 +17,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px;
     flex-wrap: wrap;
-    border-bottom: 0px solid #ffffff;
 }
 
-h1{
+h1 {
     position: absolute;
     left: 40%;
     color: #fff;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .logo img {
-    position:absolute;
+    position: absolute;
     left: 27%;
-    width: 210px; 
-    margin-right: 100px; 
+    width: 210px;
 }
 
 nav ul {
-
     list-style: none;
     display: flex;
     gap: 30px;
     padding: 20px;
-    margin-right:100px ;
+    margin-right: 100px;
 }
 
 nav ul li a {
@@ -66,7 +58,6 @@ nav ul li a {
 
 .hero img {
     width: 100%;
-    height: auto;
     max-height: 400px;
     object-fit: contain;
     display: block;
@@ -96,8 +87,8 @@ main {
 }
 
 h2 {
-    color: #000000;
-    border-bottom: 2px solid#000000;
+    color: #000;
+    border-bottom: 2px solid #000;
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -117,10 +108,9 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border: 2px solid #c2c2c2;
-    text-align: center;
 }
 
-/* Weather Styling Fix */
+/* Weather Styling */
 .weather, .forecast {
     color: rgb(242, 184, 113);
     min-height: 120px;
@@ -132,9 +122,7 @@ section {
 #currentWeather img, #forecast img {
     width: 60px; 
     height: 50px;
-    vertical-align: middle;
 }
-
 
 /* Business Directory */
 .directory {
@@ -142,7 +130,6 @@ section {
     margin-top: 20px;
 }
 
-/* Default Grid View */
 #members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -151,7 +138,6 @@ section {
     padding: 20px;
 }
 
-/* Individual Member Cards */
 .card {
     background-color: #fff;
     padding: 15px;
@@ -164,12 +150,9 @@ section {
 
 .card img {
     width: 100px;
-    height: auto;
-    margin-bottom: 10px;
     border-radius: 5px;
 }
 
-/* List View (activated when class is toggled) */
 .list-view {
     display: flex;
     flex-direction: column;
@@ -186,31 +169,77 @@ section {
     margin-right: 15px;
 }
 
-.list-view .card h3,
-.list-view .card p,
-.list-view .card a {
-    margin: 5px;
-}
-
 /* Footer */
 footer {
-    background-color: #1a3d7c;
-    color: #fff;
+    background-color: #81b7d8;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     text-align: center;
-    padding: 5px 20px;
-    margin-top: 80px;
-    border-top: 0px solid #fdfdfd;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 10px;
-    border: 2px solid white;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-width: 200px; /* Set a reasonable minimum width */
+    max-width: 300px; /* Prevent it from expanding too much */
+    font-size: 14px; /* Adjust text size */
+}
+
+.footer-info h3 {
+    font-size: 16px; /* Slightly larger than the text */
+    margin-bottom: 5px;
+}
+
+.footer-info p, .footer-info a {
+    font-size: 14px; /* Keeps paragraph and links at a normal size */
+    margin: 2px 0;
+    line-height: 1.4;
+}
+
+.footer-info a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-icons img {
+    width: 50px;
+    margin: 21px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
     padding: 5px;
+    ;
 }
 
- 
 /* Mobile View */
 @media (max-width: 768px) {
     body {
@@ -223,43 +252,25 @@ footer {
         align-items: center;
         text-align: center;
         padding: 15px;
-        width: 100%;
-        position: relative;
-    }
-
-    header h1 {
-        position: static;
-        font-size: 20px;
-        text-align: center;
-        max-width: 100%;
     }
 
     .logo img {
         position: static;
         width: 150px;
         margin: 10px 0;
-        max-width: 100%;
     }
 
     nav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #1a3d7c;
         display: none;
         flex-direction: column;
         align-items: center;
+        background-color: #1a3d7c;
         padding: 15px 0;
-        transition: max-height 0.3s ease-in-out;
     }
 
     nav ul {
         flex-direction: column;
         gap: 15px;
-        padding: 0;
-        text-align: center;
-        width: 100%;
     }
 
     .menu-toggle {
@@ -268,41 +279,11 @@ footer {
         position: absolute;
         right: 20px;
         top: 15px;
-        z-index: 10;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        margin: 6px 0;
-        transition: 0.3s;
-    }
-
-    .menu-open nav {
-        display: flex;
-    }
-
-    .menu-open .menu-toggle span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-open .menu-toggle span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-open .menu-toggle span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .hero {
-        width: 100%;
-        overflow: hidden;
     }
 
     .hero img {
         max-height: 250px;
         object-fit: cover;
-        width: 100%;
     }
 
     .hero-btn {
@@ -315,35 +296,16 @@ footer {
     .info-container {
         flex-direction: column;
         gap: 15px;
-        width: 100%;
-    }
-
-    section {
-        min-width: 100%;
-        max-width: 100%;
-        overflow: hidden;
     }
 
     #members {
         grid-template-columns: 1fr;
         padding: 10px;
-        width: 100%;
     }
 
     .list-view .card {
         flex-direction: column;
         text-align: center;
-        width: 100%;
-    }
-
-    .list-view .card img {
-        margin: 0 auto 10px;
-    }
-
-    footer {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
     }
 
     .social-icons img {
