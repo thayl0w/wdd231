@@ -3,92 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manila Chamber of Commerce</title>
-    <meta name="description" content="Metro Manila Chamber of Commerce connects businesses with opportunities, resources, and community engagement.">
-    <meta name="author" content="Mar Thayne Lowell Nacionales">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Chamber of Commerce - Business Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://thayl0w.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/directory.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Business Directory</title>
+    <meta name="description" content="Find businesses in the Manila Chamber of Commerce directory.">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Manila Chamber of Commerce</h1>
-        <div class="logo">
-            <img src="images/logo.png" alt="Chamber Logo">
-           
-        </div>
-        <nav id="navbar">
+        <h1>Business Directory</h1>
+        <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#directory">Directory</a></li>
-                <li><a href="#join">Join</a></li>
-                <li><a href="#discover">Discover</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <img src="images/hero.jpg" alt="Scalable Responsive Hero Image">
-        <button class="hero-btn">Keynote Tickets</button>
-    </section>
-
-    <!-- MAIN CONTENT -->
     <main>
-        <h2>Home</h2>
-
-        <div class="info-container">
-            <!-- EVENTS -->
-            <section class="events">
-                <h3>Events</h3>
-                <p>Upcoming events happening .</p>
-            </section>
-
-            <!-- WEATHER -->
-            <section class="weather">
-                <h3>Current Weather</h3>
-                <p id="currentWeather">Weather data unavailable</p>
-                <p id="weatherDetails">High: --°C | Low: --°C</p>
-                <p id="humidity">Humidity: --%</p>
-            </section>
-
-            <!-- FORECAST -->
-            <section class="forecast" id="forecast">
-                <h3>Weather Forecast</h3>
-                <p>Forecast data unavailable.</p>
-            </section>
-        </div>
-
-        <!-- BUSINESS DIRECTORY -->
-        <section id="directory" class="directory">
-            <h2>Business Directory</h2>
-        
-            <div id="members" class="card-flip-view"></div>
-        </section>    
-        <button id="view-toggle">Switch to Grid View</button>
-
+        <button id="toggleView">Toggle View</button>
+        <div id="directory-container"></div>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <div class="footer-info">
-            <p>Metro Manila Chamber of Commerce</p>
-            <p>326 Dela Paz, Pasig City, Philippines 2600</p>
-            <p>Email: MMchamber.org | Phone: (+63) 912345678 </p>
-        </div>
-        <div class="social-icons">
-            <img src="images/youtube.png" alt="YouTube">
-            <img src="images/twitter.png" alt="Twitter">
-            <img src="images/linkedin.png" alt="LinkedIn">
-        </div>
-        <p>&copy; <span id="year"></span> | Last Updated: <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Manila Chamber of Commerce | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
