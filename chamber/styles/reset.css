@@ -8,8 +8,8 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #cfe2ff;
-    color: #333;
+    background-color: #e8f5e9; /* Light Green */
+    color: #222; /* Dark Gray */
     margin: 0;
     padding: 0;
 }
@@ -17,26 +17,25 @@ body {
 /* Header */
 header {
     width: 100%;
-    background-color: #1a3d7c;
+    background-color: #1b5e20; /* Deep Green */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     flex-wrap: wrap;
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */;
+    box-sizing: border-box;
 }
 
 h1 img {
-    width: 50px;  /* Adjust the width as needed */
-    height: auto;  /* Maintain aspect ratio */
-    vertical-align: middle;  /* Align the image vertically with the text */
-    margin-right: 10px;  /* Add space between the image and text */
+    width: 50px;  
+    height: auto;  
+    vertical-align: middle;  
+    margin-right: 10px;
 }
-
 
 h1 {
     flex: 1;
-    color: #fff;
+    color: #ffffff; /* White */
     text-align: center;
     margin: 0;
     margin-left: 20%;
@@ -56,11 +55,10 @@ h1 {
 .menu-icon {
     display: none;
     font-size: 30px;
-    color: #fff;
+    color: #ffffff; /* White */
     cursor: pointer;
 }
 
-/* Toggle checkbox (hidden) */
 .menu-toggle {
     display: none;
 }
@@ -72,12 +70,12 @@ nav ul {
     gap: 30px;
     padding: 0;
     margin: 0;
-    justify-content: center; /* Center the navigation items */
+    justify-content: center; 
     flex: 1;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff; /* White */
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
@@ -111,7 +109,7 @@ nav ul li a {
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff; /* White */
     overflow: hidden;
 }
 
@@ -123,14 +121,13 @@ nav ul li a {
     display: block;
 }
 
-/* Hero Button */
 .hero-btn {
     position: absolute;
     bottom: 20px;
     left: 90%;
     transform: translateX(-50%);
-    background-color: #92c9ff;
-    color: #333;
+    background-color: #388e3c; /* Medium Green */
+    color: #ffffff; /* White */
     border: none;
     padding: 10px 20px;
     font-size: 20px;
@@ -145,12 +142,12 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    box-sizing: border-box;
 }
 
 h2 {
-    color: #000;
-    border-bottom: 2px solid #000;
+    color: #1b5e20; /* Deep Green */
+    border-bottom: 2px solid #1b5e20;
     padding-bottom: 5px;
     display: inline-block;
     margin: 20px 0;
@@ -167,12 +164,12 @@ h2 {
 section {
     flex: 1;
     min-width: 250px;
-    background-color: #fff;
+    background-color: #ffffff; /* White */
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #c2c2c2;
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    border: 2px solid #a5d6a7; /* Light Green */
+    box-sizing: border-box;
     margin-bottom: 20px;
 }
 
@@ -182,49 +179,51 @@ section {
         flex-direction: column;
     }
     .hero-btn {
-        width: 90%; /* Ensure the button fits within the screen on smaller devices */
+        width: 90%;
         left: 50%;
+        background-color: #2e7d32; /* Slightly Darker Green */
     }
     section {
-        flex: 100%; /* Make sections take full width on smaller devices */
+        flex: 100%;
         min-width: auto;
     }
 }
+
 /* Footer */
 footer {
-    background-color: #5c6bc0; /* Adjust the color if needed */
-    padding: 10px; /* Reduce padding */
-    font-size: 14px; /* Make the text smaller */
+    background-color: #2e7d32; /* Darker Green */
+    color: #ffffff; /* White */
+    padding: 10px;
+    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: auto; /* Let it adjust based on content */
-    min-height: 80px; /* Set a minimum height */
+    height: auto;
+    min-height: 80px;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%; /* Reduce width for better fit */
-    max-width: 1000px; /* Limit maximum size */
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .footer-info, .footer-icons, .footer-credit {
     flex: 1;
-    min-width: 200px; /* Reduce minimum width */
-    margin: 5px; /* Reduce margin */
+    min-width: 200px;
+    margin: 5px;
 }
 
 /* Social Icons */
 .footer-icons img {
-    width: 30px; /* Make icons smaller */
+    width: 30px;
     height: 30px;
 }
-
 
 /* Responsive Footer */
 @media (max-width: 768px) {
@@ -239,11 +238,10 @@ footer {
     
     .footer-info, .footer-icons, .footer-credit {
         flex: none;
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
         text-align: center;
     }
 }
-
 
 /* Mobile View Fixes */
 @media (max-width: 768px) {
@@ -253,22 +251,22 @@ footer {
     }
 
     h1 {
-        margin-left: 0; /* Reset margin for mobile view */
+        margin-left: 0;
         text-align: center;
     }
 
     .nav-menu {
-        width: 100%; /* Ensure navigation menu fits mobile screen */
+        width: 100%;
     }
 
     .hero-btn {
         width: auto;
-        left: 50%; /* Center the button */
+        left: 50%;
         transform: translateX(-50%);
     }
 
     main {
-        padding: 10px; /* Adjust padding for mobile view */
+        padding: 10px;
     }
 
     .info-container {
@@ -277,9 +275,9 @@ footer {
     }
 
     section {
-        flex: 1 1 100%; /* Make sections take full width on mobile */
-        min-width: auto; /* Ensure sections fit mobile screen */
-        margin-bottom: 15px; /* Adjust bottom margin */
+        flex: 1 1 100%;
+        min-width: auto;
+        margin-bottom: 15px;
     }
 
     .events {
@@ -288,14 +286,14 @@ footer {
     }
 
     .testimonials {
-        margin: 20px 0; /* Adjust margins for mobile view */
+        margin: 20px 0;
         width: 100%;
     }
 
     .weather {
         margin-top: 0;
         margin-left: 0;
-        max-width: 100%; /* Ensure weather section fits mobile screen */
+        max-width: 100%;
     }
 
     .footer-container {
@@ -304,8 +302,8 @@ footer {
     }
 
     .footer-info, .footer-icons, .footer-credit {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
         text-align: center;
-        margin-bottom: 10px; /* Add some space between footer elements */
+        margin-bottom: 10px;
     }
 }
