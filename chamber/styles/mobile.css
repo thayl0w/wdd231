@@ -1,104 +1,41 @@
-/* Mobile View Only */
+/* Mobile Styles - Separate File */
 @media (max-width: 768px) {
-    /* General Styles */
-    html, body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-    body {
-        padding: 0 10px; /* Add padding for better layout */
-    }
-
-    /* Header */
-    header {
+    .main-sections {
         flex-direction: column;
-        align-items: center;
     }
-
-    h1 {
-        margin: 0;
-        text-align: center;
-    }
-
-    h1 img {
-        width: 40px;  /* Adjust the width for mobile view */
-        height: auto;  /* Maintain aspect ratio */
-        margin-right: 5px;  /* Add space between the image and text */
-    }
-
-    /* Navigation */
-    .nav-menu {
+    
+    .container {
         flex-direction: column;
-        width: 100%;
-        text-align: center;
     }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Hero Section */
-    .hero-btn {
-        width: 80%; /* Adjust button width for mobile */
-        left: 50%; /* Center the button */
-        transform: translateX(-50%);
-    }
-
-    /* Main Content */
-    main {
-        padding: 10px; /* Adjust padding for mobile view */
-    }
-
-    .info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section {
-        flex: 1 1 100%; /* Make sections take full width on mobile */
-        min-width: auto;
-        margin-bottom: 15px; /* Adjust bottom margin */
-    }
-
-    .weather, .events, .testimonials, .spotlight {
+    
+    .weather, .events, .testimonials {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
-
-    .testimonials {
-        margin: 20px 0;
+    
+    .hero-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
     }
-
-    .weather {
-        margin-top: 0;
-        max-width: 100%; /* Ensure weather section fits mobile screen */
-    }
-
+    
     .spotlight {
-        margin-top: 20px; /* Add some space above the spotlight section */
-        max-width: 100%; /* Ensure spotlight section fits mobile screen */
-        padding: 15px; /* Add padding for better spacing */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
-
-    .spotlight .member {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: white; /* White background for each member */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Footer */
-    .footer-container {
+    
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
-
-    .footer-info, .footer-icons, .footer-credit {
-        width: 100%; /* Full width on mobile */
-        text-align: center;
-        margin-bottom: 10px; /* Add some space between footer elements */
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    .menu-toggle:checked + nav ul {
+        display: flex;
     }
 }
