@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+    <h1>Thank You for Your Submission!</h1>
+    <p>Here are your details:</p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.write(`<p><strong>First Name:</strong> ${params.get("first-name")}</p>`);
+        document.write(`<p><strong>Last Name:</strong> ${params.get("last-name")}</p>`);
+        document.write(`<p><strong>Email:</strong> ${params.get("email")}</p>`);
+        document.write(`<p><strong>Phone:</strong> ${params.get("phone")}</p>`);
+        document.write(`<p><strong>Organization:</strong> ${params.get("organization")}</p>`);
+        document.write(`<p><strong>Submitted on:</strong> ${params.get("timestamp")}</p>`);
+    </script>
+</body>
+</html>

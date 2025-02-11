@@ -77,6 +77,57 @@ nav ul li a {
     padding: 10px;
 }
 
+    /* Footer */
+    footer {
+        background-color: #2e7d32; 
+        color: #ffffff; 
+        padding: 10px;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        min-height: 80px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .footer-info, .footer-icons, .footer-credit {
+        flex: 1;
+        min-width: 200px;
+        margin: 5px;
+    }
+    
+    /* Social Icons */
+    .footer-icons img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-info, .footer-icons, .footer-credit {
+            flex: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
 /* Responsive Navigation */
 @media (max-width: 768px) {
     .menu-icon {
@@ -98,7 +149,12 @@ nav ul li a {
         flex-direction: column;
         gap: 10px;
     }
+
 }
+
+
+
+ /*HOME PAGE CSS/*
 
 /* Hero Section */
 .hero {
@@ -187,44 +243,7 @@ section {
     margin-top: 0; /* Removed negative margin */
 }
 
-/* Directory container */
-#directory-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box; 
-}
 
-/* Directory item */
-.directory-item {
-    border: 1px solid #ccc;
-    padding: 15px;
-    background: #f9f9f9;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.directory-item img.business-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.list-view {
-    display: block !important;
-}
-
-.list-view .directory-item {
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
-.list-view .business-logo {
-    margin-right: 15px;
-}
 /* Spotlight Section */
 .spotlight {
     width: 100%; /* Adjusted to fit within the container */
@@ -320,300 +339,49 @@ section {
     border: none;
 }
 
-/* Footer */
-footer {
-    background-color: #2e7d32; 
-    color: #ffffff; 
-    padding: 10px;
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
+
+
+/*DIRECTORY CSS/*
+
+/* Directory container */
+#directory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* Directory item */
+.directory-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #f9f9f9;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.directory-item img.business-logo {
+    width: 100px;
     height: auto;
-    min-height: 80px;
+    margin-bottom: 10px;
 }
 
-.footer-container {
+.list-view {
+    display: block !important;
+}
+
+.list-view .directory-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    align-items: center;
+    text-align: left;
 }
 
-.footer-info, .footer-icons, .footer-credit {
-    flex: 1;
-    min-width: 200px;
-    margin: 5px;
+.list-view .business-logo {
+    margin-right: 15px;
 }
 
-/* Social Icons */
-.footer-icons img {
-    width: 30px;
-    height: 30px;
-}
+/*JOIN CSS/*
 
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-info, .footer-icons, .footer-credit {
-        flex: none;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
-
-/* Mobile View Only */
-@media (max-width: 768px) {
-    /* General Styles */
-    html, body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-    body {
-        padding: 0 10px; /* Add padding for better layout */
-    }
-
-    /* Header */
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        margin: 0;
-        text-align: center;
-    }
-
-    h1 img {
-        width: 40px;  /* Adjust the width for mobile view */
-        height: auto;  /* Maintain aspect ratio */
-        margin-right: 5px;  /* Add space between the image and text */
-    }
-
-    /* Navigation */
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Hero Section */
-    .hero-btn {
-        width: 80%; /* Adjust button width for mobile */
-        left: 50%; /* Center the button */
-        transform: translateX(-50%);
-    }
-
-    /* Main Content */
-    main {
-        padding: 10px; /* Adjust padding for mobile view */
-    }
-
-    .info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section {
-        flex: 1 1 100%; /* Make sections take full width on mobile */
-        min-width: auto;
-        margin-bottom: 15px; /* Adjust bottom margin */
-    }
-
-    .weather, .events, .testimonials, .spotlight {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .testimonials {
-        margin: 20px 0;
-    }
-
-    .weather {
-        margin-top: 0;
-        max-width: 100%; /* Ensure weather section fits mobile screen */
-    }
-
-    .spotlight {
-        margin-top: 20px; /* Add some space above the spotlight section */
-        max-width: 100%; /* Ensure spotlight section fits mobile screen */
-        padding: 15px; /* Add padding for better spacing */
-    }
-
-    .spotlight .member {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: white; /* White background for each member */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Footer */
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-info, .footer-icons, .footer-credit {
-        width: 100%; /* Full width on mobile */
-        text-align: center;
-        margin-bottom: 10px; /* Add some space between footer elements */
-    }
-}
-
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.footer-info, .footer-icons, .footer-credit {
-    flex: 1;
-    min-width: 200px;
-    margin: 5px;
-}
-
-/* Social Icons */
-.footer-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-info, .footer-icons, .footer-credit {
-        flex: none;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
-
-/* Mobile View Only */
-@media (max-width: 768px) {
-    /* General Styles */
-    html, body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-    body {
-        padding: 0 10px; /* Add padding for better layout */
-    }
-
-    /* Header */
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        margin: 0;
-        text-align: center;
-    }
-
-    h1 img {
-        width: 40px;  /* Adjust the width for mobile view */
-        height: auto;  /* Maintain aspect ratio */
-        margin-right: 5px;  /* Add space between the image and text */
-    }
-
-    /* Navigation */
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Hero Section */
-    .hero-btn {
-        width: 80%; /* Adjust button width for mobile */
-        left: 50%; /* Center the button */
-        transform: translateX(-50%);
-    }
-
-    /* Main Content */
-    main {
-        padding: 10px; /* Adjust padding for mobile view */
-    }
-
-    .info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    section {
-        flex: 1 1 100%; /* Make sections take full width on mobile */
-        min-width: auto;
-        margin-bottom: 15px; /* Adjust bottom margin */
-    }
-
-    .weather, .events, .testimonials, .spotlight {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .testimonials {
-        margin: 20px 0;
-    }
-
-    .weather {
-        margin-top: 0;
-        max-width: 100%; /* Ensure weather section fits mobile screen */
-    }
-
-    .spotlight {
-        margin-top: 20px; /* Add some space above the spotlight section */
-        max-width: 100%; /* Ensure spotlight section fits mobile screen */
-        padding: 15px; /* Add padding for better spacing */
-    }
-
-    .spotlight .member {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: white; /* White background for each member */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Footer */
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-info, .footer-icons, .footer-credit {
-        width: 100%; /* Full width on mobile */
-        text-align: center;
-        margin-bottom: 10px; /* Add some space between footer elements */
-    }
-}
+/*DISCOVER CSS/*
