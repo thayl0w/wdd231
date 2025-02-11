@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Join the Metro Manila Chamber of Commerce and access a wealth of opportunities, resources, and community engagement.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Metro Manila Chamber of Commerce and access a wealth of opportunities, resources, and community engagement.">
     <meta name="author" content="Mar Thayne Lowell Nacionales">
     <title>Membership Application</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/join.css"> <!-- New CSS file for additional styles -->
     <script src="scripts/join.js" defer></script>
 </head>
-<header>
-    <h1><img src="images/logo.png" alt=""> Manila Chamber of Commerce</h1>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
+    <header>
+        <h1><img src="images/logo.png" alt="Manila Chamber of Commerce Logo"> Manila Chamber of Commerce</h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <form method="get" action="thankyou.html">
+        <form method="get" action="thankyou.html" class="application-form">
+            <h2>Membership Application</h2>
             <label title="Applicant's First Name">
                 First Name:
                 <input type="text" name="first-name" required title="Applicant's First Name" autocomplete="given-name">
             </label>
-
             <label title="Applicant's Last Name">
                 Last Name:
                 <input type="text" name="last-name" required title="Applicant's Last Name" autocomplete="family-name">
             </label>
-
             <label title="Your Title in Organization">
                 Organizational Title:
-                <input type="text" name="organization-title" title="Your Title in Organization" autocomplete="organization-title" 
-                       pattern="[A-Za-z\s\-]{7,}">
+                <input type="text" name="organization-title" title="Your Title in Organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
             </label>
-
             <label title="Applicant's Email">
                 Email:
-                <input type="email" name="email" required title="Applicant's Email" autocomplete="email" 
-                       placeholder="example@example.com">
+                <input type="email" name="email" required title="Applicant's Email" autocomplete="email" placeholder="example@example.com">
             </label>
-
             <label title="Mobile Phone Number">
                 Mobile Phone:
                 <input type="tel" name="phone" required title="Mobile Phone Number" autocomplete="tel">
             </label>
-
             <label title="Business/Organization Name">
                 Organization Name:
                 <input type="text" name="organization" required title="Business/Organization Name" autocomplete="organization">
             </label>
-
             <label title="Select Membership Level">
                 Membership Level:
                 <select name="membership-level" title="Select Membership Level">
@@ -68,17 +61,13 @@
                     <option value="gold">Gold Membership</option>
                 </select>
             </label>
-
             <label title="Business/Organization Description">
                 Organization Description:
                 <textarea name="description" title="Business/Organization Description"></textarea>
             </label>
-
             <input type="hidden" name="timestamp" id="timestamp">
-
             <input type="submit" value="Submit Application">
         </form>
-
         <div class="membership-cards">
             <div class="card" onclick="openModal('modal-np')">
                 <h3>NP Membership</h3>
@@ -102,7 +91,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modals -->
     <div id="modal-np" class="modal">
         <div class="modal-content">
@@ -111,7 +99,6 @@
             <p>Free membership for non-profits.</p>
         </div>
     </div>
-
     <div id="modal-bronze" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
@@ -119,7 +106,6 @@
             <p>Includes event invitations.</p>
         </div>
     </div>
-
     <div id="modal-silver" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-silver')">&times;</span>
@@ -127,7 +113,6 @@
             <p>More training & exposure.</p>
         </div>
     </div>
-
     <div id="modal-gold" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-gold')">&times;</span>
@@ -135,17 +120,27 @@
             <p>VIP access to all events.</p>
         </div>
     </div>
-
-    <script>
-        document.getElementById("timestamp").value = new Date().toISOString();
-
-        function openModal(id) {
-            document.getElementById(id).style.display = "block";
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none";
-        }
-    </script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Manila Chamber of Commerce</h3>
+                <p>10 Ayala Avenue</p>
+                <p>Manila, Philippines 1000</p>
+                <p><a href="mailto:info@manilacc.org">info@manilacc.org</a></p>
+                <p>(+63) 555-2300</p>
+            </div>
+            <div class="footer-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-credit">
+                <p>WDD231 Class Project</p>
+                <p>Mar Thayne Lowell Nacionales</p>
+                <p>&copy; <span id="year"></span> Manila Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

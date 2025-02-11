@@ -1,13 +1,17 @@
+// Function to update the size of the spotlight section in CSS
 function updateSpotlightSize(size) {
     document.documentElement.style.setProperty('--spotlight-width', size + '%');
 }
 
+// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
 
+    // Set the current year and last modified date in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
 
+    // Fetch and display the directory members if the directory-container exists
     const directoryContainer = document.getElementById("directory-container");
     if (directoryContainer) {
         fetch("data/members.json")
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
+    // Fetch and display the spotlight members if the spotlight-container exists
     const spotlightContainer = document.getElementById("spotlight-container");
     if (spotlightContainer) {
         fetch("data/members.json")
@@ -42,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
+    // Toggle the view of the directory list if the toggle button exists
     const toggleButton = document.getElementById("toggleView");
     if (toggleButton) {
         toggleButton.addEventListener("click", function () {
@@ -50,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Function to display the directory members
 function displayDirectory(members) {
     const container = document.getElementById("directory-container");
     if (!container) return;
@@ -71,15 +78,19 @@ function displayDirectory(members) {
     });
 }
 
+// Function to get the membership level name based on the level number
 function getMembershipLevel(level) {
     const levels = { 1: "Basic", 2: "Silver", 3: "Gold" };
     return levels[level] || "Unknown";
 }
 
+// Function to display spotlight members
 function displaySpotlightMembers(members) {
+    // Filter to get only Gold and Silver members
     const goldSilverMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
     console.log("Filtered gold and silver members:", goldSilverMembers);
 
+    // Select 2 random spotlight members
     const selectedMembers = [];
     const numMembersToSelect = 2;  // Show only 2 spotlight members
     while (selectedMembers.length < numMembersToSelect) {
@@ -89,6 +100,7 @@ function displaySpotlightMembers(members) {
 
     console.log("Selected spotlight members:", selectedMembers);
 
+    // Display the selected spotlight members
     const spotlightContainer = document.getElementById('spotlight-container');
     spotlightContainer.innerHTML = "";
     selectedMembers.forEach(member => {
