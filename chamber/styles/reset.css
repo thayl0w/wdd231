@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
@@ -28,13 +28,15 @@ h1 {
     color: #ffffff;
     text-align: center;
     margin: 0 20%;
+    margin-left: 30%;
+    margin-right: 10%;
 }
 
 .logo img, h1 img {
     width: 50px;
     height: auto;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 /* Navigation */
@@ -535,6 +537,7 @@ main h1 {
     color: #175e04;
     font-size: 28px;
     margin-bottom: 10px;
+    margin-left: 10%;
 }
 
 main p {
