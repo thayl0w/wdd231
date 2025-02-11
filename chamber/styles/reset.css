@@ -25,7 +25,7 @@ header {
 
 h1 {
     flex: 1;
-    color: #ffffff;
+    color: #e0f7fa; /* Enhanced contrast */
     text-align: center;
     margin: 0 20%;
     margin-left: 30%;
@@ -64,10 +64,14 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #4fc3f7; /* Improved contrast */
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #29b6f6; /* Improved contrast */
 }
 
 /* Footer */
@@ -318,12 +322,12 @@ section {
 
 /* Testimonials Section */
 .testimonials {
-    background-color: rgba(225, 239, 255, 0.6); 
+    background-color: rgba(225, 239, 255, 0.6);
     padding: 15px;
-    margin: 20px 0; 
+    margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; 
+    width: 100%;
     margin-top: 20px; /* Adjusted margins for better layout */
 }
 
@@ -331,8 +335,8 @@ section {
 .testimonials h2 {
     color: #1a3d7c;
     border: none;
-    margin-bottom: 20px; 
-    text-align: center; 
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Testimonials Paragraph */
@@ -342,15 +346,14 @@ section {
     margin: 10px 20px; /* Adjusted margins for better layout */
 }
 
-/*DIRECTORY CSS/*
-
+/* Directory CSS */
 /* Directory container */
 #directory-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Directory item */
@@ -383,8 +386,7 @@ section {
     margin-right: 15px;
 }
 
-/*JOIN CSS/*
-
+/* Join CSS */
 /* General Form Styling */
 .application-form {
     background: #ffffff;
@@ -522,7 +524,6 @@ section {
 }
 
 /* Join Page Main Section */
-
 main {
     text-align: center;
     max-width: 800px;
@@ -546,7 +547,7 @@ main p {
     margin-bottom: 20px;
 }
 
-/* main background image*/
+/* Main background image */
 .join-hero {
     background-image: url('https://raw.githubusercontent.com/thayl0w/wdd231/refs/heads/main/chamber/images/business.jpg');
     background-size: cover;
@@ -555,16 +556,14 @@ main p {
     color: white; /* Ensures text is visible */
     text-align: center;
     padding: 80px;
-    min-height: 300px; 
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-
-/* THANK YOU CSS */
+/* Thank You CSS */
 .thankyou-page {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -614,5 +613,4 @@ main p {
     }
 }
 
-
-/* DISCOVER CSS */
+/* Discover CSS */
