@@ -1,6 +1,6 @@
 /* General Page Styles */
 body.thankyou-page {
-    background-color: #f4f7c5; /* Softer pastel color */
+    background-color: #f4f7c5;
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
@@ -9,7 +9,7 @@ body.thankyou-page {
 /* Header */
 .thankyou-header {
     width: 100%;
-    background-color: #266756; /* Darker green */
+    background-color: #266756;
     color: white;
     padding: 50px;
     font-size: 20px;

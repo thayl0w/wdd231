@@ -5,8 +5,8 @@
 html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Open Sans', Arial, sans-serif;
-    background-color: #fcf8e3; /* Background Color (Body) */
-    color: #3e2723; /* Text Color (Body) */
+    background-color: #fcf8e3; 
+    color: #3e2723; 
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ html, body {
 /* Header */
 header {
     width: 100%;
-    background-color: #283593; /* Dark Blue Background (Header) */
+    background-color: #283593; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +25,7 @@ header {
 
 h1 {
     flex: 1;
-    color: #e8f5e9; /* Light Text Color (Header) */
+    color: #e8f5e9; 
     text-align: center;
     margin: 0 20%;
     margin-left: 30%;
@@ -49,7 +49,7 @@ h1 {
 .menu-icon {
     display: none;
     font-size: 30px;
-    color: #e8f5e9; /* Light Text Color (Header) */
+    color: #e8f5e9;
     cursor: pointer;
 }
 
@@ -64,20 +64,20 @@ nav ul {
 }
 
 nav ul li a {
-    color: #efeeee; /* Yellow Text Color (Navigation Links) */
+    color: #efeeee; 
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
 }
 
 nav ul li a:hover {
-    color: #ffab00; /* Orange Text Color (Hover for Navigation Links) */
+    color: #ffab00; 
 }
 
 /* Footer */
 footer {
-    background-color: #1a237e; /* Footer Background Color */
-    color: #e8f5e9; /* Light Text Color (Footer) */
+    background-color: #1a237e; 
+    color: #e8f5e9; 
     padding: 10px;
     font-size: 14px;
     display: flex;
@@ -111,12 +111,10 @@ footer {
 
 /* Email Link Color */
 footer a {
-    color: #f0f0f0; /* Bright Orange */
-}
+    color: #f0f0f0; }
 
 footer a:hover {
-    color: #e64a19; /* Darker Orange on Hover */
-}
+    color: #e64a19; }
 
 /* Responsive Navigation & Footer */
 @media (max-width: 768px) {
@@ -133,7 +131,7 @@ footer a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    background: #f4ff81; /* Light Grey Background (Sections) */
+    background: #f4ff81; 
 }
 
 /* Sections using shared styles */
@@ -141,14 +139,13 @@ footer a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    background: #ffcc80; /* Light Grey Background (Sections) */
+    background: #ffcc80; 
     text-align: center;
 }
 
 .spotlight .member, .testimonials p {
     font-style: italic;
-    color: #4e342e; /* Dark Grey Text (Spotlight) */
-}
+    color: #4e342e; }
 
 .spotlight .member img {
     width: 100px;
@@ -167,9 +164,9 @@ footer a:hover {
 }
 
 .directory-item {
-    border: 1px solid #bcaaa4; /* Improved contrast for border */
+    border: 1px solid #bcaaa4; 
     padding: 15px;
-    background: #fff9c4; /* Light Yellow Background */
+    background: #fff9c4; 
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -196,7 +193,7 @@ footer a:hover {
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 3px solid #ffb74d; /* Light Orange Border */
+    border-bottom: 3px solid #ffb74d; 
 }
 
 .hero img {
@@ -212,8 +209,8 @@ footer a:hover {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4527a0; /* Dark Purple Background */
-    color: #ffffff; /* White Text */
+    background-color: #4527a0; 
+    color: #ffffff; 
     border: none;
     padding: 10px 20px;
     font-size: 20px;
@@ -237,8 +234,8 @@ main {
 }
 
 h2 {
-    color: #004d40; /* Dark Teal Color */
-    border-bottom: 2px solid #004d40; /* Dark Teal Border */
+    color: #004d40;
+    border-bottom: 2px solid #004d40; 
     padding-bottom: 5px;
     display: inline-block;
     margin: 20px 0;
@@ -255,11 +252,11 @@ h2 {
 section {
     flex: 1;
     min-width: 250px;
-    background-color: #ffecb3; /* Light Yellow Background */
+    background-color: #ffecb3;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #d7ccc8; /* Light Grey Border */
+    border: 2px solid #d7ccc8; 
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -267,7 +264,7 @@ section {
 /* Events and Weather Sections */
 .events, .weather {
     flex: 1;
-    background: #ffe0b2; /* Light Orange Background */
+    background: #ffe0b2; 
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -277,7 +274,7 @@ section {
 
 .weather {
     max-width: 300px;
-    background: #bcaaa4; /* Light Brown Background */
+    background: #bcaaa4; 
     position: sticky;
     top: 20px;
     margin-top: 0;
@@ -286,7 +283,7 @@ section {
 /* Spotlight Section */
 .spotlight {
     width: 100%;
-    background: rgba(255, 224, 178, 0.8); /* Light Peach Background */
+    background: rgba(255, 224, 178, 0.8); 
     padding: 5px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -298,7 +295,7 @@ section {
 .spotlight .member {
     margin-bottom: 20px;
     padding: 15px;
-    background: #ffccbc; /* Light Coral Background */
+    background: #ffccbc; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 8px;
@@ -319,17 +316,16 @@ section {
 .spotlight .member h2 {
     margin: 10px 0;
     font-size: 1.5em;
-    color: #004d40; /* Dark Teal Color */
-}
+    color: #004d40; }
 
 .spotlight .member p {
     font-size: 1em;
-    color: #3e2723; /* Dark Brown Color */
+    color: #3e2723;
     margin: 5px 0;
 }
 
 .spotlight .member a {
-    color: #004d40; /* Dark Teal Color */
+    color: #004d40; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -339,17 +335,17 @@ section {
 }
 /* Testimonials Section */
 .testimonials {
-    background-color: #ffebee; /* Light Red Background */
+    background-color: #ffebee; 
     padding: 15px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin-top: 20px; /* Adjusted margins for better layout */
+    margin-top: 20px; 
 }
 
 .testimonials h2 {
-    color: #3e2723; /* Dark Brown Color */
+    color: #3e2723; 
     border: none;
     margin-bottom: 20px;
     text-align: center;
@@ -357,13 +353,13 @@ section {
 
 .testimonials p {
     font-style: italic;
-    color: #4e342e; /* Dark Grey Text */
-    margin: 10px 20px; /* Adjusted margins for better layout */
+    color: #4e342e; 
+    margin: 10px 20px; 
 }
 
 /* Application Form */
 .application-form {
-    background: #fff3e0; /* Light Orange Background */
+    background: #fff3e0; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -372,7 +368,7 @@ section {
 }
 
 .application-form h2 {
-    color: #000000; /* Light Grey Color */
+    color: #000000; 
     text-align: center;
     margin-bottom: 15px;
 }
@@ -389,15 +385,15 @@ section {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #a1887f; /* Light Brown Border */
+    border: 1px solid #a1887f; 
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
 }
 
 .application-form input[type="submit"] {
-    background-color: #fcb785; /* Bright Orange */
-    color: #ffffff; /* White */
+    background-color: #fcb785;
+    color: #ffffff;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -407,7 +403,7 @@ section {
 }
 
 .application-form input[type="submit"]:hover {
-    background-color: #f4511e; /* Darker Orange for better contrast */
+    background-color: #f4511e; 
 }
 
 /* Membership Cards with Animation */
@@ -420,7 +416,7 @@ section {
 }
 
 .card {
-    background: #fff8e1; /* Light Yellow Background */
+    background: #fff8e1; 
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -515,14 +511,14 @@ section {
 
 /* Modal Title */
 .modal-content h2 {
-    color: #006064; /* Teal Color */
+    color: #006064;
     margin-bottom: 10px;
 }
 
 /* Modal Text */
 .modal-content p {
     font-size: 16px;
-    color: #3e2723; /* Dark Brown */
+    color: #3e2723; 
 }
 
 /* Close Button */
@@ -562,14 +558,14 @@ main {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: #fffde7; /* Light Yellow Background */
+    background: #fffde7; 
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-weight: bold; /* Makes all text inside <main> bold */
+    font-weight: bold; 
 }
 
 main h1 {
-    color: #1a237e; /* Dark Blue */
+    color: #1a237e; 
     font-size: 28px;
     margin-bottom: 10px;
     margin-left: 10%;
@@ -578,7 +574,7 @@ main h1 {
 
 main p {
     font-size: 18px;
-    color: #004d40; /* Dark Teal */
+    color: #004d40; 
     margin-bottom: 20px;
 }
 
