@@ -255,25 +255,24 @@ section {
 }
 
 .weather {
-    max-width: 300px; /* Adjusted max-width for better layout */
+    max-width: 300px; 
     background: #d6c7a7;
     position: sticky;
-    top: 20px; /* Added to maintain stickiness */
-    margin-top: 0; /* Removed negative margin */
+    top: 20px; 
+    margin-top: 0; 
 }
 
 
 /* Spotlight Section */
 .spotlight {
-    width: 100%; /* Adjusted to fit within the container */
+    width: 100%; 
     background: rgba(225, 239, 255, 0.8);
     padding: 5px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center; 
-    position: relative; /* Changed to relative positioning */
-    margin-bottom: 20px; /* Added margin-bottom */
-}
+    position: relative; 
+    margin-bottom: 20px; }
 
 .spotlight .member {
     margin-bottom: 20px;
@@ -523,6 +522,7 @@ section {
 }
 
 /* Join Page Main Section */
+
 main {
     text-align: center;
     max-width: 800px;
@@ -545,6 +545,24 @@ main p {
     color: #333;
     margin-bottom: 20px;
 }
+
+/* main background image*/
+.join-hero {
+    background-image: url('https://www.multihousingnews.com/wp-content/uploads/sites/57/2020/02/CORPORATE-ACQUISITION-06.-Image-via-Pixabay.com_.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Ensures text is visible */
+    text-align: center;
+    padding: 80px;
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* THANK YOU CSS */
 body {
