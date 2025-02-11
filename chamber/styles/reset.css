@@ -548,7 +548,7 @@ main p {
 
 /* main background image*/
 .join-hero {
-    background-image: url('https://www.multihousingnews.com/wp-content/uploads/sites/57/2020/02/CORPORATE-ACQUISITION-06.-Image-via-Pixabay.com_.jpg');
+    background-image: url('https://raw.githubusercontent.com/thayl0w/wdd231/refs/heads/main/chamber/images/business.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
