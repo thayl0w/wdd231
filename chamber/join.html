@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    <script src="scripts/chamber.js"></script>
+    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
@@ -39,6 +39,7 @@
     </main>
 
     <div class="container">
+        
         <form method="get" action="thankyou.html" class="application-form">
             <h2>Membership Application</h2>
             <label for="first-name" title="Applicant's First Name">First Name:</label>
@@ -71,10 +72,54 @@
             <textarea id="description" name="description" title="Business/Organization Description" aria-label="Organization Description"></textarea>
 
             <input type="hidden" name="timestamp" id="timestamp">
+
             <input type="submit" value="Submit Application">
         </form>
     </div>
 
+    <!-- Membership Cards Section -->
+    <section class="membership-cards">
+        <div class="card" data-member-id="1">
+            <h2>Basic Membership</h2>
+            <p>Learn more about our Basic Membership.</p>
+            <button class="learn-more" data-modal-id="modal-1">Learn More</button>
+        </div>
+        <div class="card" data-member-id="2">
+            <h2>Silver Membership</h2>
+            <p>Learn more about our Silver Membership.</p>
+            <button class="learn-more" data-modal-id="modal-2">Learn More</button>
+        </div>
+        <div class="card" data-member-id="3">
+            <h2>Gold Membership</h2>
+            <p>Learn more about our Gold Membership.</p>
+            <button class="learn-more" data-modal-id="modal-3">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Basic Membership</h2>
+            <p>Details about the Basic Membership...</p>
+        </div>
+    </div>
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Silver Membership</h2>
+            <p>Details about the Silver Membership...</p>
+        </div>
+    </div>
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Gold Membership</h2>
+            <p>Details about the Gold Membership...</p>
+        </div>
+    </div>
+    </section>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-info">

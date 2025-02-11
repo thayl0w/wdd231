@@ -1,0 +1,56 @@
+/* General Page Styles */
+body.thankyou-page {
+    background-color: #f4f7c5; /* Softer pastel color */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+.thankyou-header {
+    width: 100%;
+    background-color: #266756; /* Darker green */
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -10%;
+}
+
+/* Centered Box */
+.thankyou-details {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+/* Form Data Formatting */
+.thankyou-details p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.thankyou-details strong {
+    color: #333;
+}
+
+/* Return Button */
+.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007f5f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    background: #005f45;
+}

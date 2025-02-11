@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
 </head>
 <body class="thankyou-page">
     <header class="thankyou-header">
@@ -14,6 +15,12 @@
     <main class="thankyou-main">
         <h2 class="thankyou-subtitle">Here are your details:</h2>
         <div id="submission-details" class="thankyou-details" aria-live="polite"></div>
+
+        <!-- Timestamp Display -->
+        <p id="display-timestamp">Timestamp: <span></span></p>
+
+        <!-- Back to Home Button -->
+        <a href="index.html" class="back-home">Return to Home</a>
     </main>
 
     <script src="scripts/thankyou.js"></script>

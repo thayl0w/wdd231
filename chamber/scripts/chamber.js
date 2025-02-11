@@ -3,8 +3,14 @@ function updateSpotlightSize(size) {
     document.documentElement.style.setProperty('--spotlight-width', size + '%');
 }
 
-// Wait until the DOM is fully loaded
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+    // Set the hidden timestamp field to the current date and time if the form exists
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -12,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.addEventListener('click', function () {
         navMenu.classList.toggle('active');
     });
+
     // Set the current year and last modified date in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
@@ -20,12 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const directoryContainer = document.getElementById("directory-container");
     if (directoryContainer) {
         fetch("data/members.json")
-            .then(response => {
-                console.log("Fetched members.json");
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                console.log("JSON data parsed:", data);
                 displayDirectory(data.members);
             })
             .catch(error => {
@@ -38,12 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const spotlightContainer = document.getElementById("spotlight-container");
     if (spotlightContainer) {
         fetch("data/members.json")
-            .then(response => {
-                console.log("Fetched members.json for spotlight");
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                console.log("JSON data parsed for spotlight:", data);
                 displaySpotlightMembers(data.members);
             })
             .catch(error => {
@@ -74,6 +73,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animatedElements.forEach(element => {
         observer.observe(element);
+    });
+
+    // ✅ MODAL FUNCTIONALITY FOR MEMBERSHIP CARDS
+    const learnMoreButtons = document.querySelectorAll(".learn-more");
+    const modals = document.querySelectorAll(".modal");
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const modalId = this.getAttribute("data-modal-id");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
+        });
+    });
+
+    modals.forEach(modal => {
+        const closeButton = modal.querySelector(".close");
+
+        if (closeButton) {
+            closeButton.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        }
+
+        // Close modal if clicking outside of modal content
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
     });
 });
 
@@ -109,7 +139,6 @@ function getMembershipLevel(level) {
 function displaySpotlightMembers(members) {
     // Filter to get only Gold and Silver members
     const goldSilverMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
-    console.log("Filtered gold and silver members:", goldSilverMembers);
 
     // Select 2 random spotlight members
     const selectedMembers = [];
@@ -118,8 +147,6 @@ function displaySpotlightMembers(members) {
         const randomIndex = Math.floor(Math.random() * goldSilverMembers.length);
         selectedMembers.push(goldSilverMembers.splice(randomIndex, 1)[0]);
     }
-
-    console.log("Selected spotlight members:", selectedMembers);
 
     // Display the selected spotlight members
     const spotlightContainer = document.getElementById('spotlight-container');
