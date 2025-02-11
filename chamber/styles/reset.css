@@ -388,7 +388,7 @@ section {
 
 .application-form input[type="submit"] {
     background-color: #a0d1e4; /* Improved contrast */
-    color: white;
+    color: rgb(18, 14, 14);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -497,6 +497,7 @@ main {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold; /* Makes all text inside <main> bold */
 }
 
 main h1 {
@@ -504,11 +505,12 @@ main h1 {
     font-size: 28px;
     margin-bottom: 10px;
     margin-left: 10%;
+    font-weight: bold;
 }
 
 main p {
     font-size: 18px;
-    color: #333;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -518,7 +520,7 @@ main p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white; /* Ensures text is visible */
+    color: white; 
     text-align: center;
     padding: 80px;
     min-height: 300px;
@@ -543,7 +545,7 @@ main p {
 }
 
 .thankyou-header {
-    background-color: #b0e0e6;
+    background-color: #376f39;
     color: rgb(255, 255, 255);
     padding: 15px;
     width: 100%;
@@ -552,7 +554,7 @@ main p {
 .thankyou-main {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgb(206, 216, 205);
+    background-color: rgb(177, 212, 173);
     display: inline-block;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
