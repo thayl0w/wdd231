@@ -123,9 +123,13 @@ footer {
 
 /* Sections using shared styles */
 .spotlight, .testimonials, .events, .weather, .directory-item {
-    @extend .card-style;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background: #ffffff;
     text-align: center;
 }
+
 
 .spotlight .member, .testimonials p {
     font-style: italic;
