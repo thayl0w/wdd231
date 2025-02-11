@@ -5,8 +5,13 @@ function updateSpotlightSize(size) {
 
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded and parsed");
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.nav-menu');
 
+    // Add click event to the menu icon
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
     // Set the current year and last modified date in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
@@ -54,6 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
             directoryContainer.classList.toggle("list-view");
         });
     }
+
+    // Initialize IntersectionObserver for scroll-triggered animations
+    const animatedElements = document.querySelectorAll('.animated-element');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-triggered');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
 });
 
 // Function to display the directory members
@@ -64,7 +85,7 @@ function displayDirectory(members) {
     container.innerHTML = "";
     members.forEach(member => {
         const div = document.createElement("div");
-        div.classList.add("directory-item");
+        div.classList.add("directory-item", "animated-element");
         div.innerHTML = `
             <img src="${member.imageUrl}" alt="${member.name} Logo" class="business-logo">
             <h3>${member.name}</h3>
@@ -105,7 +126,7 @@ function displaySpotlightMembers(members) {
     spotlightContainer.innerHTML = "";
     selectedMembers.forEach(member => {
         const memberDiv = document.createElement('div');
-        memberDiv.classList.add('member');
+        memberDiv.classList.add('member', 'animated-element');
         memberDiv.innerHTML = `
             <img src="${member.imageUrl}" alt="${member.name}" class="business-logo">
             <h2>${member.name}</h2>
