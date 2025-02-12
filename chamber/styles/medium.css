@@ -1,0 +1,294 @@
+
+/* General Styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #fcf8e3; 
+    color: #3e2723; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #283593; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+h1 {
+    flex: 1;
+    color: #e8f5e9; 
+    text-align: center;
+    margin: 0 20%;
+    margin-left: 30%;
+    margin-right: 10%;
+}
+
+.logo img, h1 img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0px;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #e8f5e9;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #efeeee; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ffab00; 
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #112d67; /* Ensure full background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Prevents overlap issues */
+    clear: both; /* Ensures it doesn't overlap floating elements */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-info, .footer-icons, .footer-credit {
+    flex: 1;
+    min-width: 200px;
+    margin: 5px;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Email Link Color */
+footer a {
+    color: #f0f0f0; }
+
+footer a:hover {
+    color: #e64a19; }
+
+/* Responsive Navigation & Footer */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    .nav-menu { display: none; flex-direction: column; width: 100%; text-align: center; }
+    .menu-toggle:checked + .menu-icon + .nav-menu { display: flex; }
+    nav ul { flex-direction: column; gap: 10px; }
+    .footer-container { flex-direction: column; align-items: center; }
+    .footer-info, .footer-icons, .footer-credit { width: 100%; text-align: center; margin-bottom: 10px; }
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Light background for better contrast */
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas:
+        "visitor"
+        "places";
+    gap: 20px;
+}
+
+/* Visitor Info Box */
+#visitor-info {
+    grid-area: visitor;
+    background: #ffffff; /* White background */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for subtle depth */
+}
+
+/* Places Container */
+#places-container {
+    grid-area: places;
+    display: grid;
+    gap: 20px;
+}
+
+/* Card Styles */
+.place-card {
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.place-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333; /* Darker text for better readability */
+}
+
+.place-card figure {
+    margin: 0;
+}
+
+.place-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.place-card address {
+    font-style: normal;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.place-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.place-card button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.place-card button:hover {
+    background: #005bb5;
+}
+
+
+/* Grid Layouts */
+@media (max-width: 640px) {
+    #places-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    #places-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    #places-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Discover Page Grid Layout */
+@media (min-width: 1024px) {
+    .discover-container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+    }
+    header { grid-area: header; }
+    main { grid-area: main; }
+    aside { grid-area: sidebar; }
+    footer { grid-area: footer; }
+}
+
+/* Discover Page Cards */
+.discover-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discover-card:hover {
+    transform: scale(1.05);
+}
+
+/* Discover Page Image Styling */
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* LocalStorage Message */
+#last-visit-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #283593;
+    margin-top: 15px;
+}
+
+/* Responsive Hover Effect */
+@media (max-width: 768px) {
+    .discover-card:hover {
+        transform: none;
+    }
+}
