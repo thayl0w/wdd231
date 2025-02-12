@@ -1,3 +1,4 @@
+export const places =
 {
     "places": [
       {
@@ -10,7 +11,7 @@
         "name": "Rizal Park",
         "address": "Roxas Blvd, Ermita, Manila, Philippines",
         "description": "A sprawling urban park dedicated to the national hero, Dr. José Rizal. It is a popular spot for relaxation and historical appreciation.",
-        "imageUrl": "images/rizal_park.webp"
+        "imageUrl": "images/luneta.webp"
       },
       {
         "name": "Manila Ocean Park",
@@ -50,4 +51,3 @@
       }
     ]
   }
-  

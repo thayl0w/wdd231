@@ -159,18 +159,11 @@ footer a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    width: 100%;
+    width: 150%;
     box-sizing: border-box;
 }
 
-.directory-item {
-    border: 1px solid #bcaaa4; 
-    padding: 15px;
-    background: #fff9c4; 
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .directory-item img.business-logo {
     width: 100px;
@@ -187,6 +180,7 @@ footer a:hover {
 }
 
 .list-view .business-logo { margin-right: 15px; }
+/*HOME PAGE CSS*/
 
 /* Home Page Hero Section */
 .hero {
@@ -256,7 +250,7 @@ section {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #d7ccc8; 
+    border: 2px solid #8b5e4d; 
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -594,131 +588,55 @@ main p {
     align-items: center;
 }
 
-/* DISCOVER CSS */
-/* GRID LAYOUT */
-.grid-container {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-    grid-template-areas: 
-        "sidebar"
-        "content";
-    font-family: 'Lato', sans-serif;
-    color: #222;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: #f0f0f0;
-    padding: 1.2rem;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-/* UPDATED GRID-CONTENT TO FLEXBOX */
-.grid-content {
-    grid-area: content;
-    display: flex;   /* Change grid to flexbox */
-    flex-wrap: nowrap; /* Prevent items from wrapping */
-    gap: 1.2rem;
-    justify-content: flex-start; /* Align items horizontally */
-    align-items: flex-start; /* Align items properly */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-}
-
-/* GRID ITEMS - SET FIXED WIDTH */
-.grid-item {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    padding: 1.2rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1.05rem;
-    color: #222;
-    width: 300px; /* Ensures items are aligned in rows */
-    flex: 0 0 auto; /* Prevents items from resizing */
-}
-
-.grid-item h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    color: #111;
-}
-
-.grid-item p {
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.grid-item figure img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* IMAGE HOVER EFFECT */
-@media (min-width: 641px) {
-    .grid-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-}
-
-/* RESPONSIVE LAYOUT FOR SMALL SCREENS (320px to 640px) */
-@media (min-width: 320px) and (max-width: 640px) {
-    .grid-container {
-        grid-template-areas: 
-            "sidebar"
-            "content";
-        grid-template-columns: 1fr;
-    }
-    .grid-content {
+/* Discover Page Grid Layout */
+@media (min-width: 1024px) {
+    .discover-container {
         display: grid;
-        grid-template-areas: 
-            "item1"
-            "item2"
-            "item3"; /* Adjust according to the number of items */
-    }
-    .grid-item:nth-child(1) {
-        grid-area: item1;
-    }
-    .grid-item:nth-child(2) {
-        grid-area: item2;
-    }
-    .grid-item:nth-child(3) {
-        grid-area: item3;
-    }
-}
-
-/* RESPONSIVE LAYOUT FOR MEDIUM SCREENS (641px to 1024px) */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .grid-container {
-        grid-template-areas: 
-            "sidebar content";
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
         grid-template-columns: 1fr 3fr;
+        gap: 20px;
     }
-    .grid-content {
-        display: grid;
-        grid-template-areas: 
-            "item1 item2 item3"; /* Adjust according to the number of items */
-        gap: 1.2rem;
-    }
-    .grid-item:nth-child(1) {
-        grid-area: item1;
-    }
-    .grid-item:nth-child(2) {
-        grid-area: item2;
-    }
-    .grid-item:nth-child(3) {
-        grid-area: item3;
-    }
+    header { grid-area: header; }
+    main { grid-area: main; }
+    aside { grid-area: sidebar; }
+    footer { grid-area: footer; }
 }
 
-/* VISITOR MESSAGE */
-#visitMessage {
-    font-size: 1.1rem;
-    font-weight: bold;
+/* Discover Page Cards */
+.discover-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
-    color: #222;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discover-card:hover {
+    transform: scale(1.05);
+}
+
+/* Discover Page Image Styling */
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* LocalStorage Message */
+#last-visit-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #283593;
+    margin-top: 15px;
+}
+
+/* Responsive Hover Effect */
+@media (max-width: 768px) {
+    .discover-card:hover {
+        transform: none;
+    }
 }

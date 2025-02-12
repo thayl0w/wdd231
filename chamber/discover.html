@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover exciting places and opportunities in Metro Manila.">
+    <title>Manila Chamber of Commerce</title>
+    <meta name="description" content="Metro Manila Chamber of Commerce connects businesses with opportunities, resources, and community engagement.">
     <meta name="author" content="Mar Thayne Lowell Nacionales">
-    <title>Discover Manila</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Chamber of Commerce - Discover">
+    <meta property="og:title" content="Chamber of Commerce - Home">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://thayl0w.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="http://127.0.0.1:5500/chamber/images/logo.png">
+    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/join.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/discovery.js" type="module"></script>
+
 </head>
+
 <body>
     <header>
-        <h1><img src="images/logo.png" alt="Manila Chamber of Commerce Logo"> Manila Chamber of Commerce</h1>
+        <h1><img src="images/logo.png" alt=""> Manila Chamber of Commerce</h1>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">&#9776;</label>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav class="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -32,35 +35,90 @@
             </ul>
         </nav>
     </header>
-    
-    <main class="grid-container">
-        <aside class="sidebar">
-            <p id="visitMessage"></p>
-        </aside>
 
-        <!-- Static Content -->
-        <section class="grid-content">
-            <article class="grid-item">
-                <h2>Rizal Park</h2>
-                <figure><img src="images/rizalpark.webp" alt="Rizal Park"></figure>
-                <address>Manila, Philippines</address>
-                <p>A historical urban park dedicated to Dr. Jose Rizal.</p>
-                <button>Learn More</button>
-            </article>
-            <article class="grid-item">
+    <main>
+        <section class="cards-container">
+            <div class="card">
                 <h2>Intramuros</h2>
-                <figure><img src="images/intramuros.webp" alt="Intramuros"></figure>
-                <address>Intramuros, Manila</address>
-                <p>The walled city of Manila, rich in Spanish-era history.</p>
+                <figure>
+                  <img src="https://theincoherentellipsis.wordpress.com/wp-content/uploads/2013/12/imgp0153b.jpg" alt="Intramuros, a historic walled city in Manila" loading="lazy">
+                </figure>
+                <address>Intramuros, Manila, Philippines</address>
+                <p>A historic walled city that served as the center of Spanish colonial rule in the Philippines. It features old churches, museums, and cobblestone streets.</p>
                 <button>Learn More</button>
-            </article>
-        </section>
-
-        <!-- Dynamic Content from JSON -->
-        <section id="directory-container" class="grid-content"></section>
-
-    </main>
-    
+              </div>
+            
+              <div class="card">
+                <h2>Rizal Park</h2>
+                <figure>
+                  <img src="images/rizal_park.webp" alt="Rizal Park, a historical urban park in Manila" loading="lazy">
+                </figure>
+                <address>Roxas Blvd, Ermita, Manila, Philippines</address>
+                <p>A sprawling urban park dedicated to the national hero, Dr. José Rizal. It is a popular spot for relaxation and historical appreciation.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>Manila Ocean Park</h2>
+                <figure>
+                  <img src="images/manila_ocean_park.webp" alt="Manila Ocean Park, a marine-themed attraction" loading="lazy">
+                </figure>
+                <address>Quirino Grandstand, Ermita, Manila, Philippines</address>
+                <p>A marine-themed park featuring aquariums, oceanariums, and live animal shows.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>National Museum of the Philippines</h2>
+                <figure>
+                  <img src="images/national_museum.webp" alt="National Museum of the Philippines showcasing history and art" loading="lazy">
+                </figure>
+                <address>Padre Burgos Ave, Ermita, Manila, Philippines</address>
+                <p>A museum showcasing Philippine history, culture, and art, including the famous 'Spoliarium' by Juan Luna.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>Binondo (Chinatown)</h2>
+                <figure>
+                  <img src="images/binondo.webp" alt="Binondo, the world's oldest Chinatown" loading="lazy">
+                </figure>
+                <address>Binondo, Manila, Philippines</address>
+                <p>The world's oldest Chinatown, known for its rich cultural heritage and delicious Chinese-Filipino cuisine.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>Fort Santiago</h2>
+                <figure>
+                  <img src="images/fort_santiago.webp" alt="Fort Santiago, a historical fortress in Intramuros" loading="lazy">
+                </figure>
+                <address>Intramuros, Manila, Philippines</address>
+                <p>A historical fortress that played a significant role in Philippine history, particularly during Spanish colonization.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>Manila Cathedral</h2>
+                <figure>
+                  <img src="images/manila_cathedral.webp" alt="Manila Cathedral, a symbol of faith and resilience" loading="lazy">
+                </figure>
+                <address>Beaterio St, Intramuros, Manila, Philippines</address>
+                <p>A majestic Roman Catholic cathedral that has withstood wars and natural disasters, serving as a symbol of faith and resilience.</p>
+                <button>Learn More</button>
+              </div>
+            
+              <div class="card">
+                <h2>Divisoria Market</h2>
+                <figure>
+                  <img src="images/divisoria.webp" alt="Divisoria Market, a bustling shopping district in Manila" loading="lazy">
+                </figure>
+                <address>Divisoria, Manila, Philippines</address>
+                <p>A bustling shopping district famous for its affordable goods, from textiles to electronics.</p>
+                <button>Learn More</button>
+              </div>
+        </div>
+      </main>
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -70,11 +128,13 @@
                 <p><a href="mailto:info@manilacc.org">info@manilacc.org</a></p>
                 <p>(+63) 555-2300</p>
             </div>
+            
             <div class="footer-icons">
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/youtube.png" alt="Follow us on YouTube"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/twitter.png" alt="Follow us on Twitter"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="Connect with us on LinkedIn"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
             </div>
+
             <div class="footer-credit">
                 <p>WDD231 Class Project</p>
                 <p>Mar Thayne Lowell Nacionales</p>
