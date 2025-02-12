@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join the Metro Manila Chamber of Commerce and access a wealth of opportunities, resources, and community engagement.">
+    <meta name="description" content="Discover exciting places and opportunities in Metro Manila.">
     <meta name="author" content="Mar Thayne Lowell Nacionales">
-    <title>Discover Our Chamber</title>
+    <title>Discover Manila</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Chamber of Commerce - Home">
+    <meta property="og:title" content="Chamber of Commerce - Discover">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://thayl0w.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/join.html">
+    <meta property="og:url" content="https://thayl0w.github.io/wdd231/chamber/discover.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/mobile.css">
-    <script src="scripts/chamber.js"></script>
-
+    <script src="scripts/chamber.js" defer></script>
 </head>
-  <body class="discover-page">
+<body>
     <header>
         <h1><img src="images/logo.png" alt="Manila Chamber of Commerce Logo"> Manila Chamber of Commerce</h1>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -33,92 +32,35 @@
             </ul>
         </nav>
     </header>
+    
+    <main class="grid-container">
+        <aside class="sidebar">
+            <p id="visitMessage"></p>
+        </aside>
 
-    <main>
-        <section id="visitor-message"></section>
-
-        <section class="discover-grid">
-            <article class="discover-card">
-                <h2>Local Park</h2>
-                <figure>
-                    <img src="images/park.webp" alt="Beautiful park with walking trails" loading="lazy">
-                </figure>
-                <address>123 Park Lane, Cityville</address>
-                <p>A peaceful park with trails, picnic areas, and a playground.</p>
+        <!-- Static Content -->
+        <section class="grid-content">
+            <article class="grid-item">
+                <h2>Rizal Park</h2>
+                <figure><img src="images/rizalpark.webp" alt="Rizal Park"></figure>
+                <address>Manila, Philippines</address>
+                <p>A historical urban park dedicated to Dr. Jose Rizal.</p>
                 <button>Learn More</button>
             </article>
-
-            <article class="discover-card">
-                <h2>Historic Museum</h2>
-                <figure>
-                    <img src="images/museum.webp" alt="Exterior of the historic museum" loading="lazy">
-                </figure>
-                <address>456 Heritage St, Cityville</address>
-                <p>Discover the rich history of our area through interactive exhibits.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>Farmers Market</h2>
-                <figure>
-                    <img src="images/market.webp" alt="Fresh produce at the farmers market" loading="lazy">
-                </figure>
-                <address>789 Market Rd, Cityville</address>
-                <p>Enjoy fresh produce, baked goods, and handmade crafts.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>Local Theater</h2>
-                <figure>
-                    <img src="images/theater.webp" alt="Stage performance at local theater" loading="lazy">
-                </figure>
-                <address>101 Broadway Ave, Cityville</address>
-                <p>Experience live performances, concerts, and community events.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>City Library</h2>
-                <figure>
-                    <img src="images/library.webp" alt="Bookshelves inside the city library" loading="lazy">
-                </figure>
-                <address>567 Library St, Cityville</address>
-                <p>A vast collection of books and digital resources for all ages.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>Nature Reserve</h2>
-                <figure>
-                    <img src="images/nature.webp" alt="Scenic nature reserve with walking trails" loading="lazy">
-                </figure>
-                <address>890 Greenway Dr, Cityville</address>
-                <p>Explore scenic trails and spot local wildlife in their habitat.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>Community Center</h2>
-                <figure>
-                    <img src="images/community.webp" alt="Exterior of the community center" loading="lazy">
-                </figure>
-                <address>222 Community Blvd, Cityville</address>
-                <p>Join workshops, fitness classes, and community gatherings.</p>
-                <button>Learn More</button>
-            </article>
-
-            <article class="discover-card">
-                <h2>City Aquarium</h2>
-                <figure>
-                    <img src="images/aquarium.webp" alt="Underwater tunnel at the city aquarium" loading="lazy">
-                </figure>
-                <address>333 Ocean Ave, Cityville</address>
-                <p>Visit fascinating marine life exhibits and interactive displays.</p>
+            <article class="grid-item">
+                <h2>Intramuros</h2>
+                <figure><img src="images/intramuros.webp" alt="Intramuros"></figure>
+                <address>Intramuros, Manila</address>
+                <p>The walled city of Manila, rich in Spanish-era history.</p>
                 <button>Learn More</button>
             </article>
         </section>
+
+        <!-- Dynamic Content from JSON -->
+        <section id="directory-container" class="grid-content"></section>
+
     </main>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -141,6 +83,5 @@
             </div>
         </div>
     </footer>
-</body>
 </body>
 </html>
