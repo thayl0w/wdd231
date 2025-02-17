@@ -620,8 +620,8 @@ main p {
 }
 
 button.learn-more {
-    background: #007bff;
-    color: white;
+    background: #dd9e4c;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -630,7 +630,7 @@ button.learn-more {
 }
 
 button.learn-more:hover {
-    background: #0056b3;
+    background: #dcc357;
 }
 
 .modal {
