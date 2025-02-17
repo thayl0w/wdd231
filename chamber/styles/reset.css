@@ -6,7 +6,7 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: #fcf8e3; 
-    color: #ffffff; 
+    color: #3e2723; 
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ html, body {
 /* Header */
 header {
     width: 100%;
-    background-color: #000000; 
+    background-color: #283593; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,17 +54,13 @@ h1 {
 }
 
 nav ul {
-    list-style: none; /* Ensure no list-style is applied */
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 0;
     margin: 0;
     justify-content: center;
-}
-
-nav ul li {
-    position: relative; /* Ensure no ::before or ::after pseudo-elements are causing the issue */
 }
 
 nav ul li a {
@@ -78,41 +74,9 @@ nav ul li a:hover {
     color: #ffab00; 
 }
 
-/* Remove any unintended content */
-.nav-menu li::before,
-.nav-menu li::after {
-    content: none; 
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: none; /* Hide the checkbox visually */
-    }
-
-    .menu-icon {
-        display: block; /* Show menu icon on small screens */
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-menu.active {
-        display: flex; /* Show the nav menu when the menu icon is clicked */
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 /* Footer */
 footer {
-    background-color: #070709; 
+    background-color: #1a237e; 
     color: #e8f5e9; 
     padding: 10px;
     font-size: 14px;
@@ -656,8 +620,8 @@ main p {
 }
 
 button.learn-more {
-    background: #000000;
-    color: rgb(255, 255, 255);
+    background: #dd9e4c;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -666,5 +630,6 @@ button.learn-more {
 }
 
 button.learn-more:hover {
-    background: #000000;
+    background: #dcc357;
 }
+

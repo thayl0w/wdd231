@@ -1,5 +1,5 @@
 // Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     // Set the hidden timestamp field to the current date and time if the form exists
     const timestampField = document.getElementById("timestamp");
     if (timestampField) {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navMenu = document.querySelector('.nav-menu');
 
     // Add click event to the menu icon
-    menuIcon.addEventListener('click', () => {
+    menuIcon.addEventListener('click', function () {
         navMenu.classList.toggle('active');
     });
 
@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (directoryContainer) {
         fetch("data/members.json")
             .then(response => response.json())
-            .then(data => displayDirectory(data.members))
+            .then(data => {
+                displayDirectory(data.members);
+            })
             .catch(error => {
                 console.error("Error loading members:", error);
                 directoryContainer.innerHTML = "<p>Directory data unavailable.</p>";
@@ -35,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (spotlightContainer) {
         fetch("data/members.json")
             .then(response => response.json())
-            .then(data => displaySpotlightMembers(data.members))
+            .then(data => {
+                displaySpotlightMembers(data.members);
+            })
             .catch(error => {
                 console.error("Error loading members for spotlight:", error);
                 spotlightContainer.innerHTML = "<p>Spotlight data unavailable.</p>";
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Toggle the view of the directory list if the toggle button exists
     const toggleButton = document.getElementById("toggleView");
     if (toggleButton) {
-        toggleButton.addEventListener("click", () => {
+        toggleButton.addEventListener("click", function () {
             directoryContainer.classList.toggle("list-view");
         });
     }
@@ -97,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modals.forEach(modal => {
         const closeButton = modal.querySelector(".close");
+
         if (closeButton) {
             closeButton.addEventListener("click", function () {
                 modal.style.display = "none";
@@ -209,7 +214,7 @@ function displayPlaces(places) {
             <p>${place.description}</p>
             <p><strong>Cost:</strong> ${place.cost}</p>
             <p><strong>Distance:</strong> ${place.distance}</p>
-            <button class="learn-more" data-modal-id="modal-${place.name.replace(/\s+/g, '-')}">Learn More</button>
+            <button class="learn-more" data-modal-id="modal-${place.name.replace(/\s+/g, '-')}" onclick="showModal('modal-${place.name.replace(/\s+/g, '-')}')">Learn More</button>
             <div id="modal-${place.name.replace(/\s+/g, '-')}" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -234,13 +239,13 @@ function showModal(modalId) {
 
     const closeButton = modal.querySelector(".close");
     if (closeButton) {
-        closeButton.addEventListener("click", () => {
+        closeButton.addEventListener("click", function () {
             modal.style.display = "none";
         });
     }
 
     // Close modal if clicking outside of modal content
-    window.addEventListener("click", (event) => {
+    window.addEventListener("click", function (event) {
         if (event.target === modal) {
             modal.style.display = "none";
         }
