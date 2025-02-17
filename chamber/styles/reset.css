@@ -54,13 +54,17 @@ h1 {
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Ensure no list-style is applied */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 0;
     margin: 0;
     justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Ensure no ::before or ::after pseudo-elements are causing the issue */
 }
 
 nav ul li a {
@@ -72,6 +76,38 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffab00; 
+}
+
+/* Remove any unintended content */
+.nav-menu li::before,
+.nav-menu li::after {
+    content: none; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide the checkbox visually */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show the nav menu when the menu icon is clicked */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Footer */
@@ -632,8 +668,8 @@ button.learn-more {
 button.learn-more:hover {
     background: #dcc357;
 }
-
-.modal {
+/* Discovery Page Modal Styling */
+.discovery-modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -646,7 +682,7 @@ button.learn-more:hover {
     align-items: center;
 }
 
-.modal-content {
+.discovery-modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -654,12 +690,12 @@ button.learn-more:hover {
     text-align: center;
 }
 
-.modal-content .close {
+.discovery-close {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.modal-content .close:hover {
+.discovery-close:hover {
     color: red;
 }
