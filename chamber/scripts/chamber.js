@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ VISIT TRACKING FEATURE
     const visitMessageContainer = document.getElementById("visit-message");
-    
+
     if (visitMessageContainer) {
         const lastVisit = localStorage.getItem("lastVisit");
         const now = Date.now();
@@ -173,7 +173,7 @@ function getMembershipLevel(level) {
 function displaySpotlightMembers(members) {
     const goldSilverMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
     const selectedMembers = [];
-    const numMembersToSelect = 2;  
+    const numMembersToSelect = 2;
     while (selectedMembers.length < numMembersToSelect) {
         const randomIndex = Math.floor(Math.random() * goldSilverMembers.length);
         selectedMembers.push(goldSilverMembers.splice(randomIndex, 1)[0]);
@@ -196,7 +196,7 @@ function displaySpotlightMembers(members) {
     });
 }
 
-// Function to display the places of interest
+// Function to display places of interest
 function displayPlaces(places) {
     const placesContainer = document.getElementById("places-container");
     if (!placesContainer) return;
@@ -204,13 +204,50 @@ function displayPlaces(places) {
     placesContainer.innerHTML = "";
     places.forEach(place => {
         const placeDiv = document.createElement("div");
-        placeDiv.classList.add("place-item", "animated-element");
+        placeDiv.classList.add("place-card");
         placeDiv.innerHTML = `
-            <img src="${place.imageUrl}" alt="${place.name}" class="place-image">
-            <h3>${place.name}</h3>
-            <p><strong>Address:</strong> ${place.address}</p>
+            <figure>
+                <img src="${place.imageUrl}" alt="${place.name}" class="place-image">
+                <figcaption>${place.name}</figcaption>
+            </figure>
+            <address>${place.address}</address>
             <p>${place.description}</p>
+            <p><strong>Cost:</strong> ${place.cost}</p>
+            <p><strong>Distance:</strong> ${place.distance}</p>
+            <button class="learn-more" data-modal-id="modal-${place.name.replace(/\s+/g, '-')}" onclick="showModal('modal-${place.name.replace(/\s+/g, '-')}')">Learn More</button>
+            <div id="modal-${place.name.replace(/\s+/g, '-')}" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>${place.name}</h2>
+                    <p>${place.description}</p>
+                    <p><strong>Address:</strong> ${place.address}</p>
+                    <p><strong>Cost:</strong> ${place.cost}</p>
+                    <p><strong>Distance:</strong> ${place.distance}</p>
+                </div>
+            </div>
         `;
         placesContainer.appendChild(placeDiv);
+    });
+}
+
+// Function to show modals
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "flex";
+    }
+
+    const closeButton = modal.querySelector(".close");
+    if (closeButton) {
+        closeButton.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    }
+
+    // Close modal if clicking outside of modal content
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
 }

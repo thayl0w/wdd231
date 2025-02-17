@@ -488,6 +488,19 @@ section {
     align-items: center;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
 .modal-content {
     background: white;
     padding: 20px;
@@ -501,6 +514,11 @@ section {
     font-weight: bold;
     cursor: pointer;
 }
+
+.modal-content .close:hover {
+    color: red;
+}
+
 
 
 /* Modal Title */
@@ -588,55 +606,101 @@ main p {
     align-items: center;
 }
 
-/* Discover Page Grid Layout */
-@media (min-width: 1024px) {
-    .discover-container {
-        display: grid;
-        grid-template-areas:
-            "header header"
-            "sidebar main"
-            "footer footer";
-        grid-template-columns: 1fr 3fr;
-        gap: 20px;
-    }
-    header { grid-area: header; }
-    main { grid-area: main; }
-    aside { grid-area: sidebar; }
-    footer { grid-area: footer; }
+/* DISCOVER PAGE */
+#places-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Discover Page Cards */
-.discover-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+.place-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.discover-card:hover {
-    transform: scale(1.05);
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Discover Page Image Styling */
-.discover-card img {
+.place-image {
     width: 100%;
-    height: auto;
+    height: 160px;
+    object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* LocalStorage Message */
-#last-visit-message {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #283593;
-    margin-top: 15px;
+.place-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.25rem;
+    color: #3e2723;
 }
 
-/* Responsive Hover Effect */
+.place-card address {
+    font-style: normal;
+    color: #6d4c41;
+    margin-bottom: 8px;
+}
+
+.place-card p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #4e342e;
+}
+
+.place-card strong {
+    color: #3e2723;
+}
+
+button.learn-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button.learn-more:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Style the Visit Message */
+.visit-message-container {
+    font-size: 1rem;
+    color: #6d4c41;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Ensure Discover Page is Responsive */
 @media (max-width: 768px) {
-    .discover-card:hover {
+    .place-card {
         transform: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .place-card:hover {
+        transform: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    button.learn-more {
+        width: 100%;
     }
 }
