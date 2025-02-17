@@ -6,7 +6,7 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: #fcf8e3; 
-    color: #3e2723; 
+    color: #ffffff; 
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ html, body {
 /* Header */
 header {
     width: 100%;
-    background-color: #76622b; 
+    background-color: #000000; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +112,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #76622b; 
+    background-color: #070709; 
     color: #e8f5e9; 
     padding: 10px;
     font-size: 14px;
@@ -656,8 +656,8 @@ main p {
 }
 
 button.learn-more {
-    background: #dd9e4c;
-    color: rgb(0, 0, 0);
+    background: #000000;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -666,5 +666,5 @@ button.learn-more {
 }
 
 button.learn-more:hover {
-    background: #dd9e4c;
+    background: #000000;
 }
