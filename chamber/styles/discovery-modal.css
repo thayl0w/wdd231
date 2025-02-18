@@ -1,31 +1,293 @@
 /* Discovery Page Modal Styling */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-
-.close {
+.discovery-close {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
-.close:hover {
+.discovery-close:hover {
     color: red;
 }
+
+/* DISCOVER */
+#places-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* First layout */
+.layout-one {
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 .";
+}
+
+/* Second layout */
+.layout-two {
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+}
+
+/* Third layout */
+.layout-three {
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Assign grid areas to cards */
+.place-card:nth-child(1) { grid-area: card1; }
+.place-card:nth-child(2) { grid-area: card2; }
+.place-card:nth-child(3) { grid-area: card3; }
+.place-card:nth-child(4) { grid-area: card4; }
+.place-card:nth-child(5) { grid-area: card5; }
+.place-card:nth-child(6) { grid-area: card6; }
+.place-card:nth-child(7) { grid-area: card7; }
+.place-card:nth-child(8) { grid-area: card8; }
+
+/* Common styling for place cards */
+.place-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.place-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+button.learn-more {
+    background: #dd9e4c;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button.learn-more:hover {
+    background: #dcc357;
+}
+
+/* General Styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #fcf8e3; 
+    color: #3e2723; 
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height for flexbox alignment */
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #283593; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+h1 {
+    flex: 1;
+    color: #e8f5e9; 
+    text-align: center;
+    margin: 0 20%;
+    margin-left: 30%;
+    margin-right: 10%;
+}
+
+.logo img, h1 img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0px;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #e8f5e9;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #efeeee; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ffab00; 
+}
+
+/* Footer */
+footer {
+    background-color: #1a237e; 
+    color: #e8f5e9; 
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 80px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-info, .footer-icons, .footer-credit {
+    flex: 1;
+    min-width: 200px;
+    margin: 5px;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Email Link Color */
+footer a {
+    color: #f0f0f0; }
+
+footer a:hover {
+    color: #e64a19; }
+
+/* Responsive Navigation & Footer */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    .nav-menu { display: none; flex-direction: column; width: 100%; text-align: center; }
+    .menu-toggle:checked + .menu-icon + .nav-menu { display: flex; }
+    nav ul { flex-direction: column; gap: 10px; }
+    .footer-container { flex-direction: column; align-items: center; }
+    .footer-info, .footer-icons, .footer-credit { width: 100%; text-align: center; margin-bottom: 10px; }
+}
+
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #004d40;
+    border-bottom: 2px solid #004d40; 
+    padding-bottom: 5px;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+main h1{
+    color: blue;
+    margin-right: 30%;}
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+    }
+    
+    .modal-content .close {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    
+    /* Modal Title */
+    .modal-content h2 {
+        color: #006064;
+        margin-bottom: 10px;
+    }
+    
+    /* Modal Text */
+    .modal-content p {
+        font-size: 16px;
+        color: #3e2723; 
+    }
+    

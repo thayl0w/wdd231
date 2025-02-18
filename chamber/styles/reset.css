@@ -589,7 +589,7 @@ main p {
 }
 
 /* DISCOVER*/
-/* Base grid container */
+
 #places-container {
     display: grid;
     gap: 20px;
@@ -673,3 +673,5 @@ button.learn-more {
 button.learn-more:hover {
     background: #dcc357;
 }
+
+
