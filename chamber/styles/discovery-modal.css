@@ -1,5 +1,5 @@
 /* Discovery Page Modal Styling */
-.discovery-modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.discovery-modal-content {
+.modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -20,12 +20,12 @@
     text-align: center;
 }
 
-.discovery-close {
+.close {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.discovery-close:hover {
+.close:hover {
     color: red;
 }
