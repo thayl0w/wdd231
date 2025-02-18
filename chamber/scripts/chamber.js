@@ -117,28 +117,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ✅ VISIT TRACKING FEATURE
-    const visitMessageContainer = document.getElementById("visit-message");
+    const visitMessage = document.getElementById('visitMessage');
+  const lastVisit = localStorage.getItem('lastVisit');
+  const now = new Date();
 
-    if (visitMessageContainer) {
-        const lastVisit = localStorage.getItem("lastVisit");
-        const now = Date.now();
+  if (!lastVisit) {
+    visitMessage.textContent = "Welcome! This is your first time visiting this page.";
+  } else {
+    const lastVisitDate = new Date(lastVisit);
+    const diffTime = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24)); // Days difference
 
-        if (!lastVisit) {
-            visitMessageContainer.textContent = "Welcome! Let us know if you have any questions.";
-        } else {
-            const lastVisitTime = parseInt(lastVisit, 10);
-            const differenceInDays = Math.floor((now - lastVisitTime) / (1000 * 60 * 60 * 24));
-
-            if (differenceInDays < 1) {
-                visitMessageContainer.textContent = "Back so soon! Awesome!";
-            } else {
-                visitMessageContainer.textContent = `You last visited ${differenceInDays} ${differenceInDays === 1 ? 'day' : 'days'} ago.`;
-            }
-        }
-
-        // Store the current visit time
-        localStorage.setItem("lastVisit", now);
+    if (diffTime < 1) {
+      visitMessage.textContent = "Welcome back! You last visited today.";
+    } else {
+      visitMessage.textContent = `Welcome back! You last visited ${diffTime} day(s) ago.`;
     }
+  }
+
+  localStorage.setItem('lastVisit', now);
+    
 });
 
 // Function to display the directory members
