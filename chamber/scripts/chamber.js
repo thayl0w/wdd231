@@ -224,6 +224,7 @@ function displayPlaces(places) {
                 </div>
             </div>
         `;
+        placeDiv.style.gridArea = `card${index + 1}`;
         placesContainer.appendChild(placeDiv);
     });
 }

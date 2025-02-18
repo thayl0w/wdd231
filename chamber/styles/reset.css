@@ -589,15 +589,56 @@ main p {
 }
 
 /* DISCOVER*/
+/* Base grid container */
 #places-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* First layout */
+.layout-one {
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 .";
+}
+
+/* Second layout */
+.layout-two {
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+}
+
+/* Third layout */
+.layout-three {
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Assign grid areas to cards */
+.place-card:nth-child(1) { grid-area: card1; }
+.place-card:nth-child(2) { grid-area: card2; }
+.place-card:nth-child(3) { grid-area: card3; }
+.place-card:nth-child(4) { grid-area: card4; }
+.place-card:nth-child(5) { grid-area: card5; }
+.place-card:nth-child(6) { grid-area: card6; }
+.place-card:nth-child(7) { grid-area: card7; }
+.place-card:nth-child(8) { grid-area: card8; }
+
+/* Common styling for place cards */
 .place-card {
     background: white;
     border-radius: 8px;
@@ -632,4 +673,3 @@ button.learn-more {
 button.learn-more:hover {
     background: #dcc357;
 }
-
