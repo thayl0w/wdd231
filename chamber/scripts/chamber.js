@@ -49,16 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch and display the places of interest
     const placesContainer = document.getElementById("places-container");
     if (placesContainer) {
-        fetch("data/places.json")
-            .then(response => response.json())
-            .then(data => {
-                console.log("Places data:", data); // Debug log
-                displayPlaces(data.places);
-            })
-            .catch(error => {
-                console.error("Error loading places:", error);
-                placesContainer.innerHTML = "<p>Places data unavailable.</p>";
-            });
+        fetch("data/places.json") // Adjust the path as needed
+        .then(response => response.json())
+        .then(data => {
+            console.log("Places data:", data); // Debug log
+            displayPlaces(data.places);
+        })
+        .catch(error => {
+            console.error("Error loading places:", error);
+            placesContainer.innerHTML = "<p>Places data unavailable.</p>";
+        });
+    
     }
 
     // Toggle the view of the directory list if the toggle button exists
@@ -199,12 +200,12 @@ function displayPlaces(places) {
     if (!placesContainer) return;
 
     placesContainer.innerHTML = "";
-    places.forEach(place => {
+    places.forEach((place, index) => {
         const placeDiv = document.createElement("div");
         placeDiv.classList.add("place-card");
         placeDiv.innerHTML = `
             <figure>
-                <img src="${place.imageUrl}" alt="${place.name}" class="place-image">
+                <img src="${place.image}" alt="${place.name}" class="place-image">
                 <figcaption>${place.name}</figcaption>
             </figure>
             <address>${place.address}</address>
