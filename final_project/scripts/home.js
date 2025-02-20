@@ -133,3 +133,111 @@ function toggleInfoBox(event) {
     box.style.left = `${rect.left + window.scrollX}px`;
 }
 
+// Sign Up Form Submission
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const user = { name, email, password };
+    
+    // Store user data in localStorage
+    localStorage.setItem('user', JSON.stringify(user));
+    closeModal('signupModal');
+    alert('Sign Up Successful! You are now signed up and logged in.');
+});
+
+// Log In Form Submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    
+    // Check if user exists and password matches
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+        closeModal('loginModal');
+        alert(`Welcome back, ${storedUser.name}! You are now logged in.`);
+    } else {
+        alert('Invalid email or password. Please try again.');
+    }
+});
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("form-message");
+
+    // Load stored data when the page loads
+    document.getElementById("name").value = localStorage.getItem("contactName") || "";
+    document.getElementById("email").value = localStorage.getItem("contactEmail") || "";
+    document.getElementById("message").value = localStorage.getItem("contactMessage") || "";
+
+    // Save form data in localStorage as user types
+    document.getElementById("name").addEventListener("input", function () {
+        localStorage.setItem("contactName", this.value);
+    });
+
+    document.getElementById("email").addEventListener("input", function () {
+        localStorage.setItem("contactEmail", this.value);
+    });
+
+    document.getElementById("message").addEventListener("input", function () {
+        localStorage.setItem("contactMessage", this.value);
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Clear previous messages
+        formMessage.style.display = "block";
+        formMessage.style.opacity = "1";
+        formMessage.innerHTML = "";
+        formMessage.style.transition = "opacity 0.5s ease";
+
+        // Conditional branching for validation
+        if (!name && !email && !message) {
+            formMessage.innerHTML = "⚠️ All fields are required!";
+            formMessage.style.color = "red";
+        } else if (!name) {
+            formMessage.innerHTML = "⚠️ Please enter your name.";
+            formMessage.style.color = "red";
+        } else if (!email.includes("@") || !email.includes(".")) {
+            formMessage.innerHTML = "⚠️ Please enter a valid email address.";
+            formMessage.style.color = "red";
+        } else if (message.length < 10) {
+            formMessage.innerHTML = "⚠️ Your message must be at least 10 characters.";
+            formMessage.style.color = "red";
+        } else {
+            // Success message
+            formMessage.innerHTML = "✅ Message sent successfully!";
+            formMessage.style.color = "green";
+            formMessage.style.fontWeight = "bold";
+
+            // Clear form fields and remove local storage
+            form.reset();
+            localStorage.removeItem("contactName");
+            localStorage.removeItem("contactEmail");
+            localStorage.removeItem("contactMessage");
+
+            // Hide the message after 3 seconds with fade-out effect
+            setTimeout(() => {
+                formMessage.style.opacity = "0";
+                setTimeout(() => {
+                    formMessage.style.display = "none";
+                    formMessage.style.opacity = "1"; // Reset opacity for next message
+                }, 500);
+            }, 3000);
+        }
+    });
+});
