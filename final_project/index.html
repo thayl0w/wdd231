@@ -98,16 +98,15 @@
             </div>
         </section>
         
-        <!-- Modal to Show Details -->
-        <div id="info-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2 id="modal-title"></h2>
-                <img id="modal-image" src="" alt="">
-                <p id="modal-description"></p>
-            </div>
-        </div>
-        
+<!-- Modal to Show Details -->
+<div id="info-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('info-modal')">&times;</span>
+        <h2 id="modal-title">Loading...</h2>
+        <img id="modal-image" src="placeholder.jpg" alt="Image Preview" onerror="this.style.display='none'">
+        <p id="modal-description">Details will appear here.</p>
+    </div>
+</div>
 
         <section class="highlight">
             <div class="highlight-image">
