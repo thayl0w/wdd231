@@ -77,7 +77,7 @@
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    display: none; /* Initially hidden */
+    display: none; 
 }
 /* Hover effect for larger views only */
 @media (min-width: 768px) {
