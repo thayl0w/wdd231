@@ -1,0 +1,99 @@
+/* Base Styles */
+:root {
+    --primary-color: #8a42f5;
+    --text-color: #ffffff;
+    --bg-color: #0a0a0a;
+    --secondary-bg: #111;
+    --accent-color: #8a42f5;
+    --button-bg: #ffffff;
+    --button-text: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-bg);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dot {
+    color: var(--primary-color);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-weight: 500;
+}
+
+.auth {
+    display: flex;
+    gap: 1rem;
+}
+
+.login {
+    font-weight: 500;
+}
+
+.signup {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--button-text);
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--secondary-bg);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
