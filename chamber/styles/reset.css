@@ -1,14 +1,18 @@
 /* Reset and Normalize */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Styles */
 html, body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: #fcf8e3; 
     color: #3e2723; 
-    margin: 0;
-    padding: 0;
 }
 
 /* Header */
@@ -20,58 +24,30 @@ header {
     align-items: center;
     padding: 30px;
     flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-h1 {
-    flex: 1;
-    color: #e8f5e9; 
-    text-align: center;
-    margin: 0 20%;
-    margin-left: 30%;
-    margin-right: 10%;
-}
-
-.logo img, h1 img {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
-    margin-right: 0px;
 }
 
 /* Navigation */
 .nav-menu {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    color: #e8f5e9;
-    cursor: pointer;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     padding: 0;
-    margin: 0;
-    justify-content: center;
 }
 
 nav ul li a {
-    color: #efeeee; 
+    color: #efeeee;
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
 }
 
 nav ul li a:hover {
-    color: #ffab00; 
+    color: #ffab00;
 }
 
 /* Footer */
@@ -79,29 +55,23 @@ footer {
     background-color: #1a237e; 
     color: #e8f5e9; 
     padding: 10px;
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
     text-align: center;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: auto;
-    min-height: 80px;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
     max-width: 1000px;
+    width: 90%;
     margin: 0 auto;
 }
 
 .footer-info, .footer-icons, .footer-credit {
     flex: 1;
     min-width: 200px;
-    margin: 5px;
 }
 
 .footer-icons img {
@@ -109,23 +79,31 @@ footer {
     height: 30px;
 }
 
-/* Email Link Color */
 footer a {
-    color: #f0f0f0; }
-
-footer a:hover {
-    color: #e64a19; }
-
-/* Responsive Navigation & Footer */
-@media (max-width: 768px) {
-    .menu-icon { display: block; }
-    .nav-menu { display: none; flex-direction: column; width: 100%; text-align: center; }
-    .menu-toggle:checked + .menu-icon + .nav-menu { display: flex; }
-    nav ul { flex-direction: column; gap: 10px; }
-    .footer-container { flex-direction: column; align-items: center; }
-    .footer-info, .footer-icons, .footer-credit { width: 100%; text-align: center; margin-bottom: 10px; }
+    color: #f0f0f0;
 }
 
+footer a:hover {
+    color: #e64a19;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 /* Shared Card Styles */
 .card-style {
     border-radius: 8px;
@@ -377,163 +355,105 @@ section {
 .application-form select,
 .application-form textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #a1887f; 
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-.application-form input[type="submit"] {
-    background-color: #fcb785;
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.application-form input[type="submit"]:hover {
-    background-color: #f4511e; 
-}
-
-/* Membership Cards with Animation */
-.membership-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.card {
-    background: #fff8e1; 
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #a1887f;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .application-form input[type="submit"] {
+        background-color: #fcb785;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-top: 10px;
     }
-}
-
-/* Modal Styling */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.application-form {
-    width: 50%;
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.membership-section {
-    width: 45%;
-}
-
-.membership-card {
-    background: #d3d3d3;
-    padding: 15px;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.membership-card button {
-    display: block;
-    margin: 10px auto;
-    padding: 8px 12px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-
-.modal-content .close {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-/* Modal Title */
-.modal-content h2 {
-    color: #006064;
-    margin-bottom: 10px;
-}
-
-/* Modal Text */
-.modal-content p {
-    font-size: 16px;
-    color: #3e2723; 
-}
-
-/* Close Button */
-.close {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-}
-
-/* Close Button Hover Effect */
-.close:hover {
-    color: red;
-}
-
-/* Responsive Design for Modal */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
+    
+    .application-form input[type="submit"]:hover {
+        background-color: #f4511e;
     }
-}
+    
+    /* Membership Cards with Animation */
+    .membership-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .card {
+        background: #fff8e1;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Modal Styling */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .application-form {
+        width: 50%;
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .membership-section {
+        width: 45%;
+    }
+    
+    .membership-card {
+        background: #d3d3d3;
+        padding: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .membership-card button {
+        display: block;
+        margin: 10px auto;
+        padding: 8px 12px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -562,7 +482,7 @@ main h1 {
     color: #1a237e; 
     font-size: 28px;
     margin-bottom: 10px;
-    margin-left: 10%;
+    margin-left: 30%;
     font-weight: bold;
 }
 
@@ -587,91 +507,4 @@ main p {
     justify-content: center;
     align-items: center;
 }
-
-/* DISCOVER*/
-
-#places-container {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* First layout */
-.layout-one {
-    grid-template-areas:
-        "card1 card2 card3"
-        "card4 card5 card6"
-        "card7 card8 .";
-}
-
-/* Second layout */
-.layout-two {
-    grid-template-areas:
-        "card1 card2"
-        "card3 card4"
-        "card5 card6"
-        "card7 card8";
-}
-
-/* Third layout */
-.layout-three {
-    grid-template-areas:
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7"
-        "card8";
-}
-
-/* Assign grid areas to cards */
-.place-card:nth-child(1) { grid-area: card1; }
-.place-card:nth-child(2) { grid-area: card2; }
-.place-card:nth-child(3) { grid-area: card3; }
-.place-card:nth-child(4) { grid-area: card4; }
-.place-card:nth-child(5) { grid-area: card5; }
-.place-card:nth-child(6) { grid-area: card6; }
-.place-card:nth-child(7) { grid-area: card7; }
-.place-card:nth-child(8) { grid-area: card8; }
-
-/* Common styling for place cards */
-.place-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.place-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.place-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-button.learn-more {
-    background: #dd9e4c;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-button.learn-more:hover {
-    background: #dcc357;
-}
-
 
