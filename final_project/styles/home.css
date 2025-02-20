@@ -590,3 +590,77 @@ footer {
     padding: 2rem;
     background-color: var(--secondary-bg);
 }
+
+/* more page */
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three columns */
+    grid-auto-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.travel-card {
+    background: #6e6d6d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.travel-card:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.travel-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: contain;
+    border-bottom: 2px solid #fffefe;
+    margin: 0 auto;
+    display: block;
+}
+
+.travel-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: white;
+}
+
+.travel-card p {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+.visit-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.visit-button:hover {
+    background: #005bb5;
+}

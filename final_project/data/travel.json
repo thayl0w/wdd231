@@ -1,0 +1,93 @@
+[
+    {
+        "name": "TripAdvisor",
+        "image": "https://www.bing.com/images/blob?bcid=r.jizlybcCAIhA",
+        "description": "Find the best hotels, attractions, and restaurants.",
+        "url": "https://www.tripadvisor.com/"
+    },
+    {
+        "name": "Expedia",
+        "image": "https://www.bing.com/images/blob?bcid=r-xSc13bNSAIJA",
+        "description": "Book flights, hotels, and vacation packages.",
+        "url": "https://www.expedia.com/"
+    },
+    {
+        "name": "Lonely Planet",
+        "image": "https://th.bing.com/th/id/OIP.pMVv0JREhXWbDYOHZsWapAHaBC?rs=1&pid=ImgDetMain",
+        "description": "Get travel guides and expert tips.",
+        "url": "https://www.lonelyplanet.com/"
+    },
+    {
+        "name": "Airbnb",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
+        "description": "Find unique places to stay around the world.",
+        "url": "https://www.airbnb.com/"
+    },
+    {
+        "name": "Klook",
+        "image": "https://www.americanexpress.com/content/dam/amex/en-sg/benefits/promotions/travel/klook/new-klook-logo_whitebg.png",
+        "description": "Book tours, activities, and local experiences.",
+        "url": "https://www.klook.com/"
+    },
+    {
+        "name": "Booking.com",
+        "image": "https://logos-world.net/wp-content/uploads/2021/08/Booking.com-Logo-2006-2012.png",
+        "description": "Discover and book hotels, homes, and travel experiences.",
+        "url": "https://www.booking.com/"
+    },
+    {
+        "name": "Agoda",
+        "image": "https://www.you.co/sg/wp-content/uploads/sites/2/2021/08/agoda-1536x640.png",
+        "description": "Affordable accommodations and travel deals worldwide.",
+        "url": "https://www.agoda.com/"
+    },
+    {
+        "name": "Skyscanner",
+        "image": "https://logos-world.net/wp-content/uploads/2022/05/Skyscanner-Logo-2008-700x394.png",
+        "description": "Compare flights, hotels, and car rentals for the best deals.",
+        "url": "https://www.skyscanner.com/"
+    },
+    {
+        "name": "Hostelworld",
+        "image": "https://logos-download.com/wp-content/uploads/2018/12/Hostelworld_Logo.png",
+        "description": "Find budget hostels and cheap accommodations.",
+        "url": "https://www.hostelworld.com/"
+    },
+    
+    {
+        "name": "Viator",
+        "image": "https://brightemaasai.com/wp-content/uploads/2016/05/pngwing.com_.png",
+        "description": "Book tours, experiences, and travel activities worldwide.",
+        "url": "https://www.viator.com/"
+    },
+    {
+        "name": "Couchsurfing",
+        "image": "https://th.bing.com/th/id/R.79fbb784583933e7c52bca6379f2c77b?rik=3uUE1c7A6jvFNg&riu=http%3a%2f%2fwww.onmarkproductions.com%2fassets%2fimages%2fcouchsurfing-logo.jpg&ehk=2aQkr%2bmaW9oJu69miKV5%2bJbjTkOrXF0JKHRWrQcKNXw%3d&risl=&pid=ImgRaw&r=0",
+        "description": "Connect with locals and find free places to stay.",
+        "url": "https://www.couchsurfing.com/"
+    },
+    {
+        "name": "Kayak",
+        "image": "https://logodix.com/logo/767010.png",
+        "description": "Search hundreds of travel sites for flights, hotels, and cars.",
+        "url": "https://www.kayak.com/"
+    },
+    {
+        "name": "Priceline",
+        "image": "https://www.offerstar.org/cdn-1/TV1Vsa_Zv-tZPzkJYeqTGqMRfFU=/0x210/logos/priceline.com.png",
+        "description": "Exclusive discounts on flights, hotels, and rental cars.",
+        "url": "https://www.priceline.com/"
+    },
+    {
+        "name": "GetYourGuide",
+        "image": "https://s22246.pcdn.co/wp-content/uploads/2020/05/GetYourGuide-logo-e1590767906835-300x41.png",
+        "description": "Find and book tours, attractions, and experiences worldwide.",
+        "url": "https://www.getyourguide.com/"
+    },
+    {
+        "name": "Rough Guides",
+        "image": "https://deih43ym53wif.cloudfront.net/RG_logo_square.png",
+        "description": "Discover detailed travel guides and expert insights.",
+        "url": "https://www.roughguides.com/"
+    }
+]
