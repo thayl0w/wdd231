@@ -16,10 +16,15 @@ function closeModal() {
     document.getElementById("info-modal").style.display = "none";
 }
 
-// Close modal when clicking outside the content
-window.onclick = function (event) {
+document.addEventListener("click", function (event) {
     let modal = document.getElementById("info-modal");
     if (event.target === modal) {
         modal.style.display = "none";
     }
-};
+});
+
+function closeModal() {
+    document.getElementById("info-modal").style.display = "none";
+}
+
+;
