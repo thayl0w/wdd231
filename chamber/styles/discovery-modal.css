@@ -1,3 +1,14 @@
+/* General Styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #fcf8e3;
+    color: #3e2723;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height for flexbox alignment */
+}
+
 /* Discovery Page Modal Styling */
 .discovery-close {
     font-size: 24px;
@@ -53,6 +64,21 @@
         "card8";
 }
 
+/* Responsive grid for mobile */
+@media (max-width: 768px) {
+    .layout-one, .layout-two, .layout-three {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+}
+
 /* Assign grid areas dynamically */
 .place-card:nth-child(1) { grid-area: card1; }
 .place-card:nth-child(2) { grid-area: card2; }
@@ -104,8 +130,6 @@ button.learn-more:hover {
     background: #dcc357;
 }
 
-
-
 /* Main Content */
 main {
     padding: 20px;
@@ -129,7 +153,7 @@ main h1 {
 
 h2 {
     color: #000000;
-    border-bottom: 2px solid #000000; 
+    border-bottom: 2px solid #000000;
     padding-bottom: 5px;
     display: inline-block;
     margin: 20px 0;
@@ -172,31 +196,7 @@ h2 {
 /* Modal Text */
 .modal-content p {
     font-size: 16px;
-    color: #000000; 
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-h2 {
     color: #000000;
-    border-bottom: 2px solid #000000; 
-    padding-bottom: 5px;
-    display: inline-block;
-    margin: 20px 0;
-}
-
-.info-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
 }
 
 /* Sections */
@@ -207,10 +207,11 @@ section {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-    border: 2px solid #000000; 
+    border: 2px solid #000000;
     box-sizing: border-box;
     margin-bottom: 20px;
 }
+
 /* Hide card information by default */
 .card-info {
     display: none;
