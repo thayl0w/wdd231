@@ -239,3 +239,58 @@ footer {
     font-size: 30px;
     cursor: pointer;
 }
+
+
+/* highlight */
+
+.highlight {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.highlight-image {
+    flex: 1;
+    max-width: 30%;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.highlight-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    color: #333;
+}
+
+.highlight-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.highlight-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.arrow-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #004080;
+    transition: transform 0.3s ease;
+}
+
+.arrow-link:hover {
+    transform: translateX(5px);
+}

@@ -27,4 +27,20 @@ function closeModal() {
     document.getElementById("info-modal").style.display = "none";
 }
 
-;
+document.querySelector(".login-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.querySelector(".login-form").style.display = "block";
+});
+
+document.querySelector(".signup-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.querySelector(".signup-form").style.display = "block";
+});
+
+// Close buttons for both forms
+document.querySelectorAll(".close-btn").forEach(button => {
+    button.addEventListener("click", function() {
+        this.closest(".form-container").style.display = "none";
+    });
+});
+
