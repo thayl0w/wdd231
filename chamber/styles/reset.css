@@ -1,25 +1,20 @@
 /* Reset and Normalize */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* General Styles */
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: #fcf8e3; 
     color: #3e2723; 
+    margin: 0;
+    padding: 0;
 }
-
 
 /* Header */
 header {
     width: 100%;
-    background-color: #283593;
+    background-color: #283593; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +25,7 @@ header {
 
 h1 {
     flex: 1;
-    color: #e8f5e9;
+    color: #e8f5e9; 
     text-align: center;
     margin: 0 20%;
     margin-left: 30%;
@@ -47,25 +42,36 @@ h1 {
 /* Navigation */
 .nav-menu {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #e8f5e9;
+    cursor: pointer;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 nav ul li a {
-    color: #efeeee;
+    color: #efeeee; 
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
 }
 
 nav ul li a:hover {
-    color: #ffab00;
+    color: #ffab00; 
 }
 
 /* Footer */
@@ -73,23 +79,29 @@ footer {
     background-color: #1a237e; 
     color: #e8f5e9; 
     padding: 10px;
-    text-align: center;
+    font-size: 14px;
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 80px;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1000px;
     width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .footer-info, .footer-icons, .footer-credit {
     flex: 1;
     min-width: 200px;
+    margin: 5px;
 }
 
 .footer-icons img {
@@ -97,31 +109,23 @@ footer {
     height: 30px;
 }
 
+/* Email Link Color */
 footer a {
-    color: #f0f0f0;
-}
+    color: #f0f0f0; }
 
 footer a:hover {
-    color: #e64a19;
-}
+    color: #e64a19; }
 
-/* Responsive Navigation */
+/* Responsive Navigation & Footer */
 @media (max-width: 768px) {
     .menu-icon { display: block; }
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-    }
-    .nav-menu.active {
-        display: flex;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+    .nav-menu { display: none; flex-direction: column; width: 100%; text-align: center; }
+    .menu-toggle:checked + .menu-icon + .nav-menu { display: flex; }
+    nav ul { flex-direction: column; gap: 10px; }
+    .footer-container { flex-direction: column; align-items: center; }
+    .footer-info, .footer-icons, .footer-credit { width: 100%; text-align: center; margin-bottom: 10px; }
 }
+
 /* Shared Card Styles */
 .card-style {
     border-radius: 8px;

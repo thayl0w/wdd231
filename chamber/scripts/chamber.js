@@ -85,19 +85,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Fetch and display places
-    function displayPlaces(places) {
-        const placesContainer = document.getElementById("places-container");
-        if (!placesContainer) return;
-    
-        placesContainer.innerHTML = "";
-        places.forEach((place, index) => {
-            const placeDiv = document.createElement("div");
-            placeDiv.classList.add("place-card");
-            placeDiv.innerHTML = `
-                <figure>
-                    <img src="${place.image}" alt="${place.name}" class="place-image" loading="lazy">
-                    <figcaption>${place.name}</figcaption>
-                </figure>
+// Function to display places dynamically
+function displayPlaces(places) {
+    const placesContainer = document.getElementById("places-container");
+    if (!placesContainer) return;
+
+    placesContainer.innerHTML = "";
+    places.forEach((place, index) => {
+        const placeDiv = document.createElement("div");
+        placeDiv.classList.add("place-card");
+        placeDiv.innerHTML = `
+            <figure>
+                <img src="${place.image}" alt="${place.name}" class="place-image" loading="lazy">
+                <figcaption>${place.name}</figcaption>
+            </figure>
+            <div class="card-info">
                 <address>${place.address}</address>
                 <p>${place.description}</p>
                 <p><strong>Cost:</strong> ${place.cost}</p>
@@ -113,11 +115,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p><strong>Distance:</strong> ${place.distance}</p>
                     </div>
                 </div>
-            `;
-            placeDiv.style.gridArea = `card${index + 1}`;
-            placesContainer.appendChild(placeDiv);
+            </div>
+        `;
+        placeDiv.style.gridArea = `card${index + 1}`;
+        placesContainer.appendChild(placeDiv);
+
+        // Add click event to toggle visibility of card information
+        placeDiv.addEventListener('click', function () {
+            this.classList.toggle('active');
         });
-    }
+    });
+}
     
     // Function to show modal
     window.showModal = function(modalId) {
