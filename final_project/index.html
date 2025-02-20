@@ -24,6 +24,34 @@
             <a href="#" class="signup">Sign up</a>
         </div>
     </header>
+  <!-- Log In Modal -->
+<div id="loginModal" class="modal modal-center">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Log In</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal modal-center">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+
     <main>
         <section class="hero">
             <div class="hero-text">
@@ -38,7 +66,7 @@
         <section class="guide">
             <h2>A Guide to Philippines Cultural Treasures</h2>
             <div class="gallery">
-                <div class="thumbnail" onclick="showDetails('Bohol', 'images/bohol.webp', 'Bohol is famous for its Chocolate Hills, tarsiers, and pristine beaches.')">
+                <div class="thumbnail" onclick="showDetails('Bohol', 'images/bohol.webp', 'Bohol is famous for its Chocolate Hills, tarsiers, and pristine beaches. Historically significant, it saw the first international treaty in the Philippines and the longest recorded revolt. Must-visit spots include Panglao Island, Loboc River, and Baclayon Church. Explore the beauty and culture of Bohol!')">
                     <img src="images/bohol.webp" alt="Bohol - Chocolate Hills" loading="lazy">
                     <button class="learn-more">Learn More</button>
                 </div>
