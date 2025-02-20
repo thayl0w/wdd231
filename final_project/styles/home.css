@@ -130,6 +130,10 @@ footer {
         box-sizing: border-box; /* Ensures padding doesn’t increase image size */
     }
     
-    
+    .hero-text p {
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+
         
 }
