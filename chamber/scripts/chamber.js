@@ -88,14 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayPlaces(places) {
         const placesContainer = document.getElementById("places-container");
         if (!placesContainer) return;
-
+    
         placesContainer.innerHTML = "";
         places.forEach((place, index) => {
             const placeDiv = document.createElement("div");
             placeDiv.classList.add("place-card");
             placeDiv.innerHTML = `
                 <figure>
-                    <img src="${place.image}" alt="${place.name}" class="place-image">
+                    <img src="${place.image}" alt="${place.name}" class="place-image" loading="lazy">
                     <figcaption>${place.name}</figcaption>
                 </figure>
                 <address>${place.address}</address>
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             placesContainer.appendChild(placeDiv);
         });
     }
-
+    
     // Function to show modal
     window.showModal = function(modalId) {
         const modal = document.getElementById(modalId);
@@ -217,4 +217,13 @@ document.addEventListener("DOMContentLoaded", function () {
             spotlightContainer.appendChild(memberDiv);
         });
     }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu functionality
+    const menuIcon = document.querySelector(".menu-icon");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
 });
