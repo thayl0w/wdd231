@@ -235,3 +235,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.toggle("active");
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Add click event to the menu icon
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
+});
