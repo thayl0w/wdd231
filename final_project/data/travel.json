@@ -1,19 +1,19 @@
 [
     {
         "name": "TripAdvisor",
-        "image": "images/tripadvisor.jpeg",
+        "image": "images/tripadvisor.png",
         "description": "Find the best hotels, attractions, and restaurants.",
         "url": "https://www.tripadvisor.com/"
     },
     {
         "name": "Expedia",
-        "image": "images/expedia.jpeg",
+        "image": "images/expedia.png",
         "description": "Book flights, hotels, and vacation packages.",
         "url": "https://www.expedia.com/"
     },
     {
         "name": "Lonely Planet",
-        "image": "images/OIP.jpeg",
+        "image": "images/OIP.png",
         "description": "Get travel guides and expert tips.",
         "url": "https://www.lonelyplanet.com/"
     },
@@ -25,19 +25,19 @@
     },
     {
         "name": "Klook",
-        "image": "images/klook.avif",
+        "image": "images/klook.png",
         "description": "Book tours, activities, and local experiences.",
         "url": "https://www.klook.com/"
     },
     {
         "name": "Booking.com",
-        "image": "images/klook.avif",
+        "image": "images/booking.png",
         "description": "Discover and book hotels, homes, and travel experiences.",
         "url": "https://www.booking.com/"
     },
     {
         "name": "Agoda",
-        "image": "images/agoda.webp",
+        "image": "images/agoda.png",
         "description": "Affordable accommodations and travel deals worldwide.",
         "url": "https://www.agoda.com/"
     },
@@ -62,13 +62,13 @@
     },
     {
         "name": "Couchsurfing",
-        "image": "images/R.jpeg",
+        "image": "images/R.png",
         "description": "Connect with locals and find free places to stay.",
         "url": "https://www.couchsurfing.com/"
     },
     {
         "name": "Kayak",
-        "image": "images/kayak.webp",
+        "image": "images/kayak.png",
         "description": "Search hundreds of travel sites for flights, hotels, and cars.",
         "url": "https://www.kayak.com/"
     },
