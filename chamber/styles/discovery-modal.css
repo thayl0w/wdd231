@@ -167,7 +167,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffab00;
+    color: #ffffff;
 }
 
 /* Menu Icon for Mobile */
@@ -295,8 +295,8 @@ main h1 {
 }
 
 h2 {
-    color: #004d40;
-    border-bottom: 2px solid #004d40; 
+    color: #000000;
+    border-bottom: 2px solid #000000; 
     padding-bottom: 5px;
     display: inline-block;
     margin: 20px 0;
@@ -332,14 +332,14 @@ h2 {
 
 /* Modal Title */
 .modal-content h2 {
-    color: #006064;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 /* Modal Text */
 .modal-content p {
     font-size: 16px;
-    color: #3e2723; 
+    color: #000000; 
 }
 
 /* Main Content */
@@ -352,8 +352,8 @@ main {
 }
 
 h2 {
-    color: #004d40;
-    border-bottom: 2px solid #004d40; 
+    color: #000000;
+    border-bottom: 2px solid #000000; 
     padding-bottom: 5px;
     display: inline-block;
     margin: 20px 0;
@@ -370,11 +370,11 @@ h2 {
 section {
     flex: 1;
     min-width: 250px;
-    background-color: #ffecb3;
+    background-color: #f4eacc;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #8b5e4d; 
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    border: 2px solid #000000; 
     box-sizing: border-box;
     margin-bottom: 20px;
 }
