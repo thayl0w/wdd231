@@ -52,7 +52,7 @@ header {
 /* Navigation */
 nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 10rem;
 }
 
 nav ul li a {
@@ -96,4 +96,40 @@ footer {
 .social-icons {
     display: flex;
     gap: 1rem;
+}
+
+/* hero */
+@media (min-width: 768px) {
+    .hero, .highlight {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .hero-text, .highlight-text {
+        max-width: 50%;
+    }
+
+    .hero-image, .highlight-image {
+        max-width: 50%;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+    .hero-image img {
+        width: 100%; /* Ensures responsiveness */
+        height: auto;
+        display: block; /* Removes extra space below the image */
+        border: 2px solid #ef83fd; /* Your requested color */
+        padding: 5px; /* Optional: Adds spacing inside the border */
+        box-sizing: border-box; /* Ensures padding doesn’t increase image size */
+    }
+    
+    
+        
 }
