@@ -118,3 +118,18 @@ function closeModal(modalId) {
         modal.classList.remove('modal-center');
     }
 }
+function toggleInfoBox(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const infoBox = document.getElementById("info-box");
+    if (infoBox.classList.contains("active")) {
+        infoBox.classList.remove("active");
+    } else {
+        infoBox.classList.add("active");
+    }
+    // Position the box beside the button
+    const button = event.target;
+    const rect = button.getBoundingClientRect();
+    box.style.top = `${rect.top + window.scrollY + button.offsetHeight}px`;
+    box.style.left = `${rect.left + window.scrollX}px`;
+}
+
