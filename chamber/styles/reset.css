@@ -234,7 +234,7 @@ footer a:hover {
     .hero-btn { font-size: 18px; padding: 8px 16px; }
 }
 
-/* Main Content */
+/* Main Content
 main {
     padding: 20px;
     max-width: 1200px;
@@ -258,7 +258,7 @@ h2 {
     justify-content: space-between;
 }
 
-/* Sections */
+/* Sections 
 section {
     flex: 1;
     min-width: 250px;
@@ -270,7 +270,7 @@ section {
     box-sizing: border-box;
     margin-bottom: 20px;
 }
-
+ */
 /* Events and Weather Sections */
 .events, .weather {
     flex: 1;
@@ -505,7 +505,7 @@ section {
 }
 
 /* Join Page Main Section */
-main {
+/* main {
     text-align: center;
     max-width: 800px;
     margin: 40px auto;
@@ -528,7 +528,7 @@ main p {
     font-size: 18px;
     color: #004d40; 
     margin-bottom: 20px;
-}
+} */
 
 /* Main background image */
 .join-hero {
