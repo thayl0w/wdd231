@@ -7,6 +7,7 @@
     <meta name="author" content="Mar Thayne Lowell Nacionales">
     <meta name="description" content="Uncover the hidden gems and must-visit spots in the Philippines.">
     <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js"></script>
 </head>
 <body>
     <header>
@@ -39,13 +40,41 @@
         <section class="guide">
             <h2>A Guide to Philippines Cultural Treasures</h2>
             <div class="gallery">
-                <div class="thumbnail"><img src="placeholder.png" data-src="real-image1.jpg" alt="Image 1" loading="lazy"></div>
-                <div class="thumbnail"><img src="placeholder.png" data-src="real-image2.jpg" alt="Image 2" loading="lazy"></div>
-                <div class="thumbnail"><img src="placeholder.png" data-src="real-image3.jpg" alt="Image 3" loading="lazy"></div>
-                <div class="thumbnail"><img src="placeholder.png" data-src="real-image4.jpg" alt="Image 4" loading="lazy"></div>
-                <div class="thumbnail"><img src="placeholder.png" data-src="real-image5.jpg" alt="Image 5" loading="lazy"></div>
+                <div class="thumbnail" onclick="showDetails('Bohol', 'images/bohol.jpg', 'Bohol is famous for its Chocolate Hills, tarsiers, and pristine beaches.')">
+                    <img src="images/bohol.jpg" alt="Bohol - Chocolate Hills">
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="thumbnail" onclick="showDetails('Palawan', 'images/palawan.jpg', 'Palawan offers stunning beaches like El Nido and the Underground River.')">
+                    <img src="images/palawan.jpg" alt="Palawan - Beautiful Beaches">
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="thumbnail" onclick="showDetails('Vigan', 'images/vigan.jpg', 'Vigan is a UNESCO Heritage site known for its Spanish-era streets and local cuisine.')">
+                    <img src="images/vigan.jpg" alt="Vigan - Spanish Colonial Town">
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="thumbnail" onclick="showDetails('Taal', 'images/taal.jpg', 'Taal Volcano is a unique volcano within a lake, offering scenic views and historical sites.')">
+                    <img src="images/taal.jpg" alt="Taal Volcano">
+                    <button class="learn-more">Learn More</button>
+                </div>
+                <div class="thumbnail" onclick="showDetails('Batanes', 'images/batanes.jpg', 'Batanes is known for its breathtaking landscapes, rolling hills, and Ivatan culture.')">
+                    <img src="images/batanes.jpg" alt="Batanes - Rolling Hills">
+                    <button class="learn-more">Learn More</button>
+                </div>
             </div>
         </section>
+        
+        <!-- Modal to Show Details -->
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        
+        <script src="scripts/script.js"></script>
+        
         
 
         <section class="highlight">
