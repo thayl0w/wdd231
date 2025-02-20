@@ -45,7 +45,7 @@ h1 img {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 60px;
+    top: 10px;
     left: 0;
     right: 0;
     padding: 10px 0;
@@ -54,6 +54,7 @@ h1 img {
 }
 
 .nav-menu.active {
+    position: relative;
     display: flex;
     transform: translateY(0);
 }
@@ -530,7 +531,7 @@ main p {
     margin-bottom: 20px;
 } */
 
-/* Main background image */
+/* Main background image
 .join-hero {
     background-image: url('https://raw.githubusercontent.com/thayl0w/wdd231/refs/heads/main/chamber/images/business.jpg');
     background-size: cover;
@@ -544,5 +545,5 @@ main p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 

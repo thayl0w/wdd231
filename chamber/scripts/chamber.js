@@ -1,1 +1,224 @@
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("timestamp");e&&(e.value=(new Date).toISOString());const t=document.querySelector(".menu-icon"),n=document.querySelector(".nav-menu");t.addEventListener("click",function(){n.classList.toggle("active")}),document.getElementById("year").textContent=(new Date).getFullYear(),document.getElementById("lastModified").textContent=document.lastModified;const o=document.getElementById("directory-container");o&&fetch("data/members.json").then(e=>e.json()).then(e=>{a(e.members)}).catch(e=>{console.error("Error loading members:",e),o.innerHTML="<p>Directory data unavailable.</p>"});const c=document.getElementById("spotlight-container");c&&fetch("data/members.json").then(e=>e.json()).then(e=>{i(e.members)}).catch(e=>{console.error("Error loading members for spotlight:",e),c.innerHTML="<p>Spotlight data unavailable.</p>"});const d=document.getElementById("places-container");d&&fetch("data/places.json").then(e=>e.json()).then(e=>{console.log("Places data:",e),s(e.places)}).catch(e=>{console.error("Error loading places:",e),d.innerHTML="<p>Places data unavailable.</p>"});const l=document.getElementById("toggleView");l&&l.addEventListener("click",function(){o.classList.toggle("list-view")});const r=document.querySelectorAll(".animated-element"),m=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("scroll-triggered"),m.unobserve(e.target))})});r.forEach(e=>{m.observe(e)}),window.showModal=function(e){const t=document.getElementById(e);t&&(t.style.display="flex")},window.closeModal=function(e){const t=document.getElementById(e);t&&(t.style.display="none")},window.addEventListener("click",function(e){document.querySelectorAll(".modal").forEach(t=>{e.target===t&&(t.style.display="none")})});const u=document.getElementById("visitMessage"),p=localStorage.getItem("lastVisit"),y=new Date;if(p){const e=new Date(p),t=Math.floor((y-e)/864e5);u.textContent=t<1?"Welcome back! You last visited today.":`Welcome back! You last visited ${t} day(s) ago.`}else u.textContent="Welcome! This is your first time visiting this page.";localStorage.setItem("lastVisit",y);function a(e){const t=document.getElementById("directory-container");t&&(t.innerHTML="",e.forEach(e=>{const n=document.createElement("div");n.classList.add("directory-item","animated-element"),n.innerHTML=`<img src="${e.imageUrl}" alt="${e.name} Logo" class="business-logo"><h3>${e.name}</h3><p><strong>Industry:</strong> ${e.industry}</p><p><strong>Address:</strong> ${e.address}</p><p><strong>Phone:</strong> ${e.phone}</p><p><strong>Membership Level:</strong> ${b(e.membershipLevel)}</p><a href="${e.website}" target="_blank">Visit Website</a>`,t.appendChild(n)}))}function b(e){return{1:"Basic",2:"Silver",3:"Gold"}[e]||"Unknown"}function i(e){const t=e.filter(e=>2===e.membershipLevel||3===e.membershipLevel),n=[];for(;n.length<2;){const e=Math.floor(Math.random()*t.length);n.push(t.splice(e,1)[0])}const o=document.getElementById("spotlight-container");o.innerHTML="",n.forEach(e=>{const t=document.createElement("div");t.classList.add("member","animated-element"),t.innerHTML=`<img src="${e.imageUrl}" alt="${e.name}" class="business-logo"><h2>${e.name}</h2><p>${e.address}</p><p><strong>Phone:</strong> ${e.phone}</p><p><strong>Website:</strong> <a href="${e.website}" target="_blank">${e.website}</a></p><p><strong>Industry:</strong> ${e.industry}</p>`,o.appendChild(t)})}function s(e){const t=document.getElementById("places-container");t&&(t.innerHTML="",e.forEach((e,n)=>{const o=document.createElement("div");o.classList.add("place-card"),o.innerHTML=`<figure><img src="${e.image}" alt="${e.name}" class="place-image" loading="lazy"><figcaption>${e.name}</figcaption></figure><div class="card-info"><address>${e.address}</address><p>${e.description}</p><p><strong>Cost:</strong> ${e.cost}</p><p><strong>Distance:</strong> ${e.distance}</p><button class="learn-more" data-modal-id="modal-${n}" onclick="showModal('modal-${n}')">Learn More</button><div id="modal-${n}" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-${n}')">&times;</span><h2>${e.name}</h2><p>${e.description}</p><p><strong>Address:</strong> ${e.address}</p><p><strong>Cost:</strong> ${e.cost}</p><p><strong>Distance:</strong> ${e.distance}</p></div></div></div>`,o.style.gridArea=`card${n+1}`,t.appendChild(o),o.addEventListener("click",function(){this.classList.toggle("active")})}))}});
+document.addEventListener("DOMContentLoaded", function () {
+    // Set the hidden timestamp field to the current date and time if the form exists
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.nav-menu');
+    // Add click event to the menu icon
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
+    // Set the current year and last modified date in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+    // Fetch and display the directory members if the directory-container exists
+    const directoryContainer = document.getElementById("directory-container");
+    if (directoryContainer) {
+        fetch("data/members.json")
+            .then(response => response.json())
+            .then(data => {
+                displayDirectory(data.members);
+            })
+            .catch(error => {
+                console.error("Error loading members:", error);
+                directoryContainer.innerHTML = "<p>Directory data unavailable.</p>";
+            });
+    }
+    // Fetch and display the spotlight members if the spotlight-container exists
+    const spotlightContainer = document.getElementById("spotlight-container");
+    if (spotlightContainer) {
+        fetch("data/members.json")
+            .then(response => response.json())
+            .then(data => {
+                displaySpotlightMembers(data.members);
+            })
+            .catch(error => {
+                console.error("Error loading members for spotlight:", error);
+                spotlightContainer.innerHTML = "<p>Spotlight data unavailable.</p>";
+            });
+    }
+    // Fetch and display the places of interest
+    const placesContainer = document.getElementById("places-container");
+    if (placesContainer) {
+        fetch("data/places.json")
+        .then(response => response.json())
+        .then(data => {
+            console.log("Places data:", data); // Debug log
+            displayPlaces(data.places);
+        })
+        .catch(error => {
+            console.error("Error loading places:", error);
+            placesContainer.innerHTML = "<p>Places data unavailable.</p>";
+        });
+    }
+    // Toggle the view of the directory list if the toggle button exists
+    const toggleButton = document.getElementById("toggleView");
+    if (toggleButton) {
+        toggleButton.addEventListener("click", function () {
+            directoryContainer.classList.toggle("list-view");
+        });
+    }
+    // Initialize IntersectionObserver for scroll-triggered animations
+    const animatedElements = document.querySelectorAll('.animated-element');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-triggered');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+// Function to display places dynamically
+function displayPlaces(places) {
+    const placesContainer = document.getElementById("places-container");
+    if (!placesContainer) return;
+
+    placesContainer.innerHTML = "";
+    places.forEach((place, index) => {
+        const placeDiv = document.createElement("div");
+        placeDiv.classList.add("place-card");
+        placeDiv.innerHTML = `
+            <figure>
+                <img src="${place.image}" alt="${place.name}" class="place-image" loading="lazy">
+                <figcaption>${place.name}</figcaption>
+            </figure>
+            <div class="card-info">
+                <address>${place.address}</address>
+                <p>${place.description}</p>
+                <p><strong>Cost:</strong> ${place.cost}</p>
+                <p><strong>Distance:</strong> ${place.distance}</p>
+                <button class="learn-more" data-modal-id="modal-${index}" onclick="showModal('modal-${index}')">Learn More</button>
+                <div id="modal-${index}" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal-${index}')">&times;</span>
+                        <h2>${place.name}</h2>
+                        <p>${place.description}</p>
+                        <p><strong>Address:</strong> ${place.address}</p>
+                        <p><strong>Cost:</strong> ${place.cost}</p>
+                        <p><strong>Distance:</strong> ${place.distance}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        placeDiv.style.gridArea = `card${index + 1}`;
+        placesContainer.appendChild(placeDiv);
+
+        // Add click event to toggle visibility of card information
+        placeDiv.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent bubbling
+            const info = this.querySelector('.card-info');
+            info.style.display = info.style.display === "block" ? "none" : "block";
+        });
+    });
+}   
+    // Function to show modal
+    window.showModal = function(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "flex";
+        }
+    };
+    // Function to close modal
+    window.closeModal = function(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "none";
+        }
+    };
+    // Close modal if clicking outside of modal content
+    window.addEventListener("click", function (event) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+    // Visit tracking feature
+    const visitMessage = document.getElementById('visitMessage');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = new Date();
+    if (!lastVisit) {
+        visitMessage.textContent = "Welcome! This is your first time visiting this page.";
+    } else {
+        const lastVisitDate = new Date(lastVisit);
+        const diffTime = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24)); // Days difference
+        if (diffTime < 1) {
+            visitMessage.textContent = "Welcome back! You last visited today.";
+        } else {
+            visitMessage.textContent = `Welcome back! You last visited ${diffTime} day(s) ago.`;
+        }
+    }
+    localStorage.setItem('lastVisit', now);
+    // Functions to handle the directory members and spotlight members display
+    function displayDirectory(members) {
+        const container = document.getElementById("directory-container");
+        if (!container) return;
+        container.innerHTML = "";
+        members.forEach(member => {
+            const div = document.createElement("div");
+            div.classList.add("directory-item", "animated-element");
+            div.innerHTML = `
+                <img src="${member.imageUrl}" alt="${member.name} Logo" class="business-logo">
+                <h3>${member.name}</h3>
+                <p><strong>Industry:</strong> ${member.industry}</p>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Membership Level:</strong> ${getMembershipLevel(member.membershipLevel)}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+            `;
+            container.appendChild(div);
+        });
+    }
+    function getMembershipLevel(level) {
+        const levels = { 1: "Basic", 2: "Silver", 3: "Gold" };
+        return levels[level] || "Unknown";
+    }
+    function displaySpotlightMembers(members) {
+        const goldSilverMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
+        const selectedMembers = [];
+        const numMembersToSelect = 2;
+        while (selectedMembers.length < numMembersToSelect) {
+            const randomIndex = Math.floor(Math.random() * goldSilverMembers.length);
+            selectedMembers.push(goldSilverMembers.splice(randomIndex, 1)[0]);
+        }
+        const spotlightContainer = document.getElementById('spotlight-container');
+        spotlightContainer.innerHTML = "";
+        selectedMembers.forEach(member => {
+            const memberDiv = document.createElement('div');
+            memberDiv.classList.add('member', 'animated-element');
+            memberDiv.innerHTML = `
+                <img src="${member.imageUrl}" alt="${member.name}" class="business-logo">
+                <h2>${member.name}</h2>
+                <p>${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p><strong>Industry:</strong> ${member.industry}</p>
+            `;
+            spotlightContainer.appendChild(memberDiv);
+        });
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu functionality
+    const menuIcon = document.querySelector(".menu-icon");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.nav-menu');
+    // Add click event to the menu icon
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
+});
