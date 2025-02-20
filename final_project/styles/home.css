@@ -1,10 +1,10 @@
 /* Base Styles */
 :root {
-    --primary-color: #8a42f5;
+    --primary-color: #ef83fd;
     --text-color: #ffffff;
     --bg-color: #0a0a0a;
     --secondary-bg: #111;
-    --accent-color: #8a42f5;
+    --accent-color: #ef83fd;
     --button-bg: #ffffff;
     --button-text: #000;
 }
